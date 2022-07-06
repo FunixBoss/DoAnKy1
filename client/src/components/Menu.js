@@ -7,7 +7,7 @@ export default class Menu extends Component {
             <div className="wp_navigation_menu">
                 <button className="wp_close_btn"><i className="fa fa-times" /></button>
                 <div className="wp_nav_logo">
-                    <Link to="/"><img src="./images/logo.png" /></Link>
+                    <Link to="/"><img src="./images/logo.png" style={{width: '250px', height: '100px'}}/></Link>
                 </div>
                 <ul>
                     <li>
