@@ -18,7 +18,7 @@ class CreateCartsTable extends Migration
             $table->integer('customer_id');
             $table->integer('ticket_id');
             $table->date('cart_date');
-            $table->binary('payment');
+            $table->integer('payment');
         });
     }
 
@@ -29,6 +29,6 @@ class CreateCartsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cart');
+        Schema::dropIfExists('carts');
     }
 }
