@@ -13,10 +13,14 @@ use App\Http\Controllers\Client\PageController;
 // Client-side Routes
 Route::get('/', [PageController::class, 'index'])->name('index');
 Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
-Route::get('/events', [PageController::class, 'events'])->name('events');
-Route::get('/event_single', [PageController::class, 'event_single'])->name('event_single');
+Route::get('/fare', [PageController::class, 'fare'])->name('fare');
+Route::get('/playground', [PageController::class, 'playground'])->name('playground');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::get('/login', [PageController::class, 'login'])->name('login');
+Route::get('/register', [PageController::class, 'register'])->name('register');
+
+
 
 
 

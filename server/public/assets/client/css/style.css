@@ -683,6 +683,9 @@ button:focus {
 	margin-top: 20px;
 	font-size: 16px;
 }
+.wp_about_caption p:last-of-type{
+    margin-bottom: 25px;
+}
 .wp_about_caption button{
 	margin-top: 20px;
 }
@@ -785,11 +788,12 @@ button:focus {
 	text-align: center;
 	border: 2px solid #3dcaf6;
 	border-radius:10px;
-	padding: 30px;
+	padding: 20px;
 	background: #fff;
 	position: relative;
 	margin-right: 20px;
 	min-height: 270px;
+    height: 350px;
 }
 .wp_service_caption:after{
 	position: absolute;
@@ -1026,6 +1030,9 @@ button:focus {
 .wp_footer_content ul li:last-child a{
 	border-right: none;
 }
+iframe{
+    margin-bottom: 100px;
+}
 .wp_footer_contact{
 	text-align: center;
 	margin-bottom: 50px;
@@ -1120,6 +1127,14 @@ button:focus {
 	font-size: 50px;
 	color: #fff;
 	margin-bottom: 20px;
+}
+.wp_bread_caption h2{
+    font-size: 40px;
+    color: #fff;
+    margin-top: 10px;
+}
+.wp_bread_caption i{
+    color:#c50e29;
 }
 .wp_bread_caption ul{
 	margin:0;
@@ -1347,17 +1362,20 @@ button:focus {
 	z-index: 2;
 }
 #map{
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2),rgba(61,202,246,1)),url(../images/banner.jpg);
+    background-size: cover;
+    background-position: bottom;
 	height: 600px;
 }
 .wp_contact_wrapper{
 	position: absolute;
 	width: 100%;
 	left:0;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	transform: translateY(-50%);
+	-webkit-transform: translateY(-20%);
+	-moz-transform: translateY(-20%);
+	-ms-transform: translateY(-20%);
+	-o-transform: translateY(-20%);
+	transform: translateY(-20%);
 	z-index: 4;
 }
 .wp_contact{
@@ -1504,6 +1522,7 @@ button:focus {
 	font-size: 16px;
 }
 .wp_headquaters_wrapper{
+    margin-top: 200px;
 	padding-top: 300px;
 }
 .wp_headquaters_text{
@@ -1620,6 +1639,7 @@ button:focus {
 }
 .wp_headquaters_wrapper{
 	padding-top: 100px;
+    margin-top: 0;
 }
 .wp_contact_detail img{
 	position: absolute;

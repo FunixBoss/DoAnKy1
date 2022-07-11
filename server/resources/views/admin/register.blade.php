@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    @include('admin.blocks.head')
-    <title>Pullshoes | Register</title>
+    @include('admin.components.head')
+    <title>Keansburg Waterpark | Register</title>
 </head>
 
 <body class="bg-gradient-primary">
@@ -20,7 +20,9 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
-                            <form class="user" action="{{route('postRegister')}}" method="POST">
+                            {{-- <form class="user" action="{{route('postRegister')}}" method="POST"> --}}
+                            <form class="user" method="POST">
+
                                 @csrf
                                 <div class="form-group row" >
                                     <div class="col-sm-6 mb-3 mb-sm-0">
@@ -73,8 +75,8 @@
 
     </div>
 
-    @include('admin.blocks.javascript')
-    
+    @include('admin.components.javascript')
+
 
 </body>
 

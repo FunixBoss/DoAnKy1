@@ -6,7 +6,7 @@
                 <div class="wp_footer_content">
                     <img src="{{asset('assets/client/images/logo.png')}}" alt="">
                     <ul>
-                        <li><a href="/index-2">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="/gallery">Gallery</a></li>
                         <li><a href="/event">Events</a></li>
                         <li><a href="/contact">Contact</a></li>
@@ -18,30 +18,31 @@
                 <div class="wp_footer_contact">
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                     <h2>Address</h2>
-                    <p>1 N. Cactus Ave.<br>Green Bay, WI 54302</p>
+                    <p>35/6 D5 Street, Binh Thanh District<br>Ho Chi Minh City, Vietnam</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="wp_footer_contact">
                     <i class="fa fa-phone" aria-hidden="true"></i>
                     <h2>Phone</h2>
-                    <p>+44 7700 900023<br>+44 7700 900023</p>
+                    <p>+84 783562372<br/>+84 769162970<br/>+84 868306045
+                    </p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="wp_footer_contact">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                     <h2>Email</h2>
-                    <a href="#">Info@youremail.com<br>Info@youremail.com</a>
+                    <a href="#!">nguyenphu1147@gmail.com<br>hungn12333@gmail.com<br/>dangmanhhung300@gmail.com</a>
                 </div>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="wp_social_icons">
                     <ul>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#!"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#!"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#!"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        <li><a href="#!"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </div>

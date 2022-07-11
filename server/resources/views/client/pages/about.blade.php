@@ -26,25 +26,22 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wp_bottom_padder50">
                     <div class="wp_about_caption">
-                        <h2>What Is Water Park Theme</h2>
+                        <h2>About Keansburg Waterpark</h2>
                         <p>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                            quae ab illo inventore veritatis et quasi architecto beatae
-                            vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                            voluptas sit aspernatur aut odit aut fugit, sed quia
-                            consequuntur magni dolores eos qui ratione.
+                            Keansburg Water Park with a harmonious space combined with romantic rivers melts away worries and sorrows and is also a source of energy for a new day. Take a deep breath to enjoy the fresh air of a poetic nature and then immerse yourself in the undulating waves or let yourself float in the clouds and let the Lazy River soothe and dispel late worries. trouble in a life full of worries.
                         </p>
                         <p>
-                            luptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-                            ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-                            non numquam eius modi tempora incidunt ut labore et dolore
-                            magnam aliquam quaerat voluptatem. Ut enim ad minima. Neque
-                            porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                            consectetur, adipisci velit, sed quia non numquam eius modi
-                            tempora incidunt.
+                            Let's challenge 36 game devices to enjoy the wonderful sensations of each game. Not only bring you fun, games are also seen as challenges. Overcoming all 36 challenges of the game, you will be stronger when facing challenges in life.
                         </p>
-                        <button class="wp_button">MORE</button>
+                        <p>
+                            Keansburg Water Park is not only one of the familiar entertainment centers of the city people but also a place to bring comfort as well as entertainment for children after months of stressful studying. Your baby's day off will be more fun when you and your parents have fun with the family of Elephants, Hippos, ... where childhood paradise is sparkling with colors with full of slides for babies.
+                        </p>
+                        <p>
+                            Coming to Keansburg Water Park, you will really feel secure when participating in the games at the park because the clean water is regularly renewed, the air is fresh and there is always a professional rescue team ready to support, take care you. In addition, the park also has a system of fast food stalls and a 400-seat restaurant with rich, attractively prepared menus that are always ready to serve you.
+                        </p>
+                        <p>
+                            With only 1 ticket, you will be able to relax and challenge with 36 game devices and a 3000m2 wide wave pool.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wp_bottom_padder50">
@@ -96,82 +93,6 @@
         </div>
     </div>
 
-    <!-- service section start -->
-    <div class="wp_service_wrapper wp_top_padder100 wp_bottom_padder30">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="wp_heading">
-                        <h2>Services</h2>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wp_bottom_padder70">
-                    <div class="wp_service_caption">
-                        <img src="{{asset('assets/client/images/service/01.png')}}" alt="" class="img-responsive" />
-                        <h4>Water Park</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt Lorem ipsum dolor sit amet,
-                            consectetur adipiscing.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wp_bottom_padder70">
-                    <div class="wp_service_caption">
-                        <img src="{{asset('assets/client/images/service/02.png')}}" alt="" class="img-responsive" />
-                        <h4>Spa</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt Lorem ipsum dolor sit amet,
-                            consectetur adipiscing.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wp_bottom_padder70">
-                    <div class="wp_service_caption">
-                        <img src="{{asset('assets/client/images/service/03.png')}}" alt="" class="img-responsive" />
-                        <h4>Yoga</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt Lorem ipsum dolor sit amet,
-                            consectetur adipiscing.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wp_bottom_padder70">
-                    <div class="wp_service_caption">
-                        <img src="{{asset('assets/client/images/service/04.png')}}" alt="" class="img-responsive" />
-                        <h4>Resort</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt Lorem ipsum dolor sit amet,
-                            consectetur adipiscing.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wp_bottom_padder70">
-                    <div class="wp_service_caption">
-                        <img src="{{asset('assets/client/images/service/05.png')}}" alt="" class="img-responsive" />
-                        <h4>Gym</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt Lorem ipsum dolor sit amet,
-                            consectetur adipiscing.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wp_bottom_padder70">
-                    <div class="wp_service_caption">
-                        <img src="{{asset('assets/client/images/service/06.png')}}" alt="" class="img-responsive" />
-                        <h4>Sports</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt Lorem ipsum dolor sit amet,
-                            consectetur adipiscing.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {{-- Services --}}
+    @include('client.components.services')
 @endsection
