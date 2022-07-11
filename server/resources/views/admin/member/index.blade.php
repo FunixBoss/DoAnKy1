@@ -28,38 +28,31 @@
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Username</th>
                                     <th>Fullname</th>
                                     <th>Email</th>
-                                    <th>Phone</th>
                                     <th>Created At</th>
                                     <th>Edit</th>
                                     <th>Delete</th> 
                                 </tr>
                             </thead>
-                            <tfoot>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Username</th>
-                                    <th>Fullname</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Created At</th>
-                                    <th>Edit</th>
-                                    <th>Delete</th>   
-                                </tr>
-                            </tfoot>
+                            
                             <tbody>
                                 @forelse ($members as $member)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
-                                        <td>{{$member->username}}</td>
-                                        <td>{{$member->fullname}}</td>
                                         <td>{{$member->email}}</td>
-                                        <td>{{$member->phone}}</td>
+                                        <td>{{$member->fullname}}</td>
+                                        
                                         <td>{{ date('h:i:s - d/m/y', strtotime($member->created_at))}}</td>
-                                        <td><a href="{{ Route('admin.member.edit', ['id' => $member->id]) }}">Edit</a></td>
-                                        <td><a onclick="return confirmDelete()" href="{{ Route('admin.member.delete', ['id' => $member->id]) }}">Delete</a></td>
+                                        <td>
+                                            {{-- <a href="{{ Route('admin.member.edit', ['id' => $member->id]) }}">Edit</a> --}}
+                                            edit
+                                        </td>
+                                        <td>
+                                            {{-- <a onclick="return confirmDelete()" href="{{ Route('admin.member.delete', ['id' => $member->id]) }}">Delete</a> --}}
+                                            
+                                            delete
+                                        </td>
                                     </tr>
                                 @empty
                                     <tr>
