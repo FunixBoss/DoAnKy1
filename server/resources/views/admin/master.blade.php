@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @include('admin.blocks.head')
+    @include('admin.components.head')
     <title>Admin Dashboard</title>
 </head>
 <!-- body -->
 <body id="page-top">
     <div id="wrapper">
-        @include('admin.blocks.aside')
+        @include('admin.components.aside')
 
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-                @include('admin.blocks.topnav')
+                @include('admin.components.topnav')
 
                 @yield('main_content')
             </div>
-    
-            @include('admin.blocks.footer')
+
+            @include('admin.components.footer')
 
         </div>
     </div>
 
-    @include('admin.blocks.scroll-to-top')
+    @include('admin.components.scroll-to-top')
 
-    @include('admin.blocks.logout-modal')
-    
-    @include('admin.blocks.javascript')
+    @include('admin.components.logout-modal')
+
+    @include('admin.components.javascript')
 </body>
 </html>

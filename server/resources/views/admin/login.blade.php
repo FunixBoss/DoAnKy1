@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>  
-    @include('admin.blocks.head')
+<head>
+    @include('admin.components.head')
 
     <title>Pullshoes | Login </title>
 </head>
@@ -10,10 +10,6 @@
 <body class="bg-gradient-primary">
 
     <div class="container">
-        <?php 
-            // echo pheptoan(10,15);
-        
-        ?>
         <!-- Outer Row -->
         <div class="row justify-content-center">
 
@@ -29,13 +25,17 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
+
                                     @if (Session::has('error'))
                                     <div class="alert alert-success alert-block">
                                         <button type="button" class="close"  data-dismiss="alert">x</button>
                                         <strong>{{Session::get('error')}}</strong>
                                     </div>
                                     @endif
-                                    <form class="user" action="{{route('postLogin')}}" method="POST">
+
+                                    {{-- <form class="user" action="{{route('postLogin')}}" method="POST"> --}}
+                                    <form class="user"  method="POST">
+
                                         @csrf
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
@@ -71,7 +71,7 @@
 
     </div>
 
-    @include('admin.blocks.javascript')
+    @include('admin.components.javascript')
 
 </body>
 
