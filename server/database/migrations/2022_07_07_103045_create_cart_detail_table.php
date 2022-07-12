@@ -19,6 +19,7 @@ class CreateCartDetailTable extends Migration
             $table->integer('ticket_id');
             $table->integer('quantity');
             $table->integer('price');
+            $table->foreign('cart_detail_id')->references('cart_id')->on('carts');
         });
     }
 

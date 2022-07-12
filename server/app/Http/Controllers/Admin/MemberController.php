@@ -15,7 +15,7 @@ use App\Http\Requests\Member\UpdateRequest;
 class MemberController extends Controller
 {
     public function index(){
-        $result = DB::table('members')->orderBy('created_at', 'DESC')->get();
+        $result = DB::table('admin')->orderBy('created_at', 'DESC')->get();
         return view('admin.member.index', ['members' => $result]);
 
     }
@@ -35,7 +35,7 @@ class MemberController extends Controller
     }
 
     public function edit($id){
-        $member = DB::table('members')->where('id', $id)->first( );
+        $member = DB::table('admin')->where('id', $id)->first();
         $edit_myself=null;
         if(AUth::user()->id == $id){
             $edit_myself=true;
