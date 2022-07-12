@@ -10,8 +10,18 @@
         <li><a href="/playground"><i class="fas fa-dungeon" aria-hidden="true"></i></i>Playground</a></li>
         <li><a href="/contact"><i class="fa-solid fa-address-book"></i></i>Contact</a></li>
         <li><a href="/about"><i class="fa fa-user" aria-hidden="true"></i>About</a></li>
-        <li><a href="/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></i>Login</a></li>
-        <li><a href="/register"><i class="fa-solid fa-user-plus"></i></i>Register</a></li>
+        @if(!Auth::check())
+            <li><a href="/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></i>Login</a></li>
+            <li><a href="/register"><i class="fa-solid fa-user-plus"></i></i>Register</a></li>
+        @else
+        
+        <li>
+            <form action="{{route('getLogout')}}" method="post">
+                @csrf
+            <button type="submit" ><i class="fa-solid fa-arrow-right-to-bracket"></i></i>Logout</button>
+            </form>
+        </li>
 
+        @endif
     </ul>
 </div>

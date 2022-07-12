@@ -12,21 +12,25 @@ use App\Http\Controllers\Client\PageController;
 
 
 // Client-side Routes
+
 Route::get('/', [PageController::class, 'index'])->name('index');
 Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
 Route::get('/fare', [PageController::class, 'fare'])->name('fare');
 Route::get('/playground', [PageController::class, 'playground'])->name('playground');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
-Route::get('/login', [PageController::class, 'login'])->name('login');
-Route::get('/register', [PageController::class, 'register'])->name('register');
+Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('CheckLogout');
+Route::post('/login', [loginController::class, 'postLogin'])->name('postLogin');
+Route::get('/register', [loginController::class, 'register'])->middleware('CheckLogout')->name('register');
+Route::post('/register', [loginController::class, 'postRegister'])->middleware('CheckLogout')->name('postRegister');
+Route::post('/logout', [loginController::class, 'getLogout'])->name('getLogout');
 
 
 
 
 
 // Server-side Routes
-Route::prefix('admin')->name('admin.')->group(function(){
+Route::prefix('admin')->name('admin.')->middleware(['CheckLogin','CheckAdmin'])->group(function(){
     Route::get('/', function(){
         return view('admin.index');
     });

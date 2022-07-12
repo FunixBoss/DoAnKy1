@@ -21,7 +21,7 @@
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
                             {{-- <form class="user" action="{{route('postRegister')}}" method="POST"> --}}
-                            <form class="user" method="POST">
+                            <form class="user" method="POST" action="{{route('postRegister')}}">
 
                                 @csrf
                                 <div class="form-group row" >
@@ -38,6 +38,7 @@
                                     <input type="email" name="email" class="form-control form-control-user" id="exampleInputEmail"
                                         placeholder="Email Address">
                                 </div>
+                                
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="password" name="password" class="form-control form-control-user"
@@ -47,6 +48,15 @@
                                         <input type="number" name="phone" class="form-control form-control-user"
                                             id="exampleRepeatPassword" placeholder="Phone" >
                                     </div>
+
+                                </div>
+                                
+                                <div class="form-group">
+                                    <select name="level">
+                                        <option value="1">Admin</option>
+                                        <option value="2" selected>Member</option>
+                                    </select>
+                                   
                                 </div>
                                 <div class="form-group-row" style="margin-bottom: 10px;">
                                     <input type="file" name="avatar">

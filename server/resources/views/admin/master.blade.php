@@ -12,10 +12,8 @@
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 @include('admin.components.topnav')
-
                 @yield('main_content')
             </div>
-
             @include('admin.components.footer')
 
         </div>

@@ -34,13 +34,13 @@
                                     @endif
 
                                     {{-- <form class="user" action="{{route('postLogin')}}" method="POST"> --}}
-                                    <form class="user"  method="POST">
+                                    <form class="user"  method="POST" action="{{route('postLogin')}}">
 
                                         @csrf
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
-                                                name="username" id="username" aria-describedby="emailHelp"
-                                                placeholder="Username">
+                                                name="email" id="email" aria-describedby="emailHelp"
+                                                placeholder="email">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="password" class="form-control form-control-user"
@@ -55,6 +55,8 @@
                                             <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
                                         </a>
                                     </form>
+
+                                    
                                     <hr>
                                     <div class="text-center">
                                         <a class="small" href="#">Forgot Password?</a>

@@ -15,39 +15,39 @@ use App\Http\Requests\Member\UpdateRequest;
 class MemberController extends Controller
 {
     public function index(){
-        $result = DB::table('admin')->orderBy('created_at', 'DESC')->get();
-        return view('admin.member.index', ['members' => $result]);
+        $result = DB::table('customers')->orderBy('created_at', 'DESC')->get();
+        return view('admin.pages.member.index', ['members' => $result]);
 
     }
 
     public function create(){
-        return view('admin.member.create');
+        return view('admin.pages.member.create');
     }
 
     public function store(StoreRequest $request){
+        // dd('asd');
         $data = $request->except('_token');
         $data['password'] = bcrypt($request->password);
         $data['created_at'] = new \DateTime();
-
-        DB::table('members')->insert($data);
+        DB::table('customers')->insert($data);
 
         return redirect()->route('admin.member.index')->with('success', 'Insert successfully');
     }
 
     public function edit($id){
-        $member = DB::table('admin')->where('id', $id)->first();
+        $member = DB::table('customers')->where('customer_id', $id)->first();
         $edit_myself=null;
-        if(AUth::user()->id == $id){
-            $edit_myself=true;
-        } else{
-            $edit_myself = false;
-        }
-        
-
-        if(Auth::user()->id != 1 && ($id == 1 || ($member->level == 1 && $edit_myself == false))){
-            return "khong sua duoc";
-        }
-        return view('admin.member.edit', ['id'=>$id, 'member' => $member])->with('success', 'Edit successfully');
+        // dd(Auth::User());
+        // if(Auth::user()->customer_id == $id){
+        //     $edit_myself=true;
+        // } else{
+        //     $edit_myself = false;
+        // }
+        // dd('asd');
+        // if(Auth::user()->customer_id != 1 && ($id == 1 || ($member->level == 1 && $edit_myself == false))){
+        //     return "khong sua duoc";
+        // }
+        return view('admin.pages.member.edit', ['id'=>$id, 'member' => $member])->with('success', 'Edit successfully');
     }
 
     public function update(UpdateRequest $request, $id){
