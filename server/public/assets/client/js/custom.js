@@ -75,6 +75,7 @@
                 })
             }
         },
+
         pie: function () {
             $('.pie').pieChart({
                 barColor: '#fff',

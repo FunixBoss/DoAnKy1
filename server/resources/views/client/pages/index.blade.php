@@ -39,7 +39,8 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wp_bottom_padder50">
                     <div class="wp_about_img">
-                        <img src="{{asset('assets/client/images/about.png')}}" alt="" class="img-responsive">
+                        {{-- <img src="{{asset('assets/client/images/about.png')}}" alt="" class="img-responsive"> --}}
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/NjOTpuruSgU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -144,50 +145,75 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="wp_heading">
-                        <h2>Upcoming Events</h2>
+                        <h2>Amusement Park</h2>
                     </div>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wp_bottom_padder50">
                     <div class="wp_event_caption">
                         <div class="wp_event_img">
-                            <img src="{{asset('assets/client/images/blog/1.jpg')}}" alt="" class="img-responsive">
-                            <a href="/event_single">19<br>Sept</a>
+                            <img src="{{asset('assets/client/images/playground/1.jpg')}}" alt="" class="img-responsive">
                         </div>
                         <div class="wp_event_text">
-                            <h4><a href="/event_single">Pool Partry On the Seak  All are Welcome</a></h4>
-                            <h5><a href="/event_single">Organised By: Divid Carlo</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.It aliquip ex ea commodo consequat.</p>
-                            <a href="/event_single" class="wp_button">GET NOW</a>
+                            <h4>Green Dragon Chutes</h4>
+                            <p>Conquering time in 12 seconds with a height of 12 meters and a length of 80 meters, Green Dragon is a new game imported from Canada with 03 transparent twists.
+                                With the appearance of Green Dragon, visitors are excited by the speed and bravery as its name suggests, just put people in accordance with the regulations, the power of Green Dragon will take us along the spirals of creation. one surprise after another.</p>
+                            <a href="/playground" class="wp_button">Buy Ticket</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wp_bottom_padder50">
                     <div class="wp_event_caption left_img">
                         <div class="wp_left_event_img">
-                            <img src="{{asset('assets/client/images/blog/2.jpg')}}" alt="" class="img-responsive">
-                            <a href="/event_single">20<br>Sept</a>
+                            <img src="{{asset('assets/client/images/playground/2.jpg')}}" alt="" class="img-responsive">
                         </div>
                         <div class="wp_event_text">
-                            <h4><a href="/event_single">Pool Side Night Party Please Join Us & Have Fun</a></h4>
-                            <h5><a href="/event_single">Organised By: Divid Carlo</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.It aliquip ex ea commodo consequat.</p>
-                            <a href="/event_single" class="wp_button">GET NOW</a>
+                            <h4>Wild River</h4>
+                            <p>Under the push of the water from above, you will feel like floating on a small bamboo boat and dance with the bumpy waterfall...
+                            </p>
+                            <a href="/playground" class="wp_button">Buy Ticket</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wp_bottom_padder50">
                     <div class="wp_event_caption">
                         <div class="wp_event_img">
-                            <img src="{{asset('assets/client/images/blog/3.jpg')}}" alt="" class="img-responsive">
-                            <a href="/event_single">26<br>Sept</a>
+                            <img src="{{asset('assets/client/images/playground/3.jpg')}}" alt="" class="img-responsive">
                         </div>
                         <div class="wp_event_text">
-                            <h4><a href="/event_single">Kids Pool Inaugration Programme Please Join us</a></h4>
-                            <h5><a href="/event_single">Organised By: Divid Carlo</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.It aliquip ex ea commodo consequat.</p>
-                            <a href="/event_single" class="wp_button">GET NOW</a>
+                            <h4>Wandering River</h4>
+                            <p>Lying on a floating float on a 400m long river winding around green arches and caves… You will have wonderful relaxing moments with nature.</p>
+                            <a href="/playground" class="wp_button">Buy Ticket</a>
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wp_bottom_padder50">
+                    <div class="wp_event_caption left_img">
+                        <div class="wp_left_event_img">
+                            <img src="{{asset('assets/client/images/playground/4.jpg')}}" alt="" class="img-responsive">
+                        </div>
+                        <div class="wp_event_text">
+                            <h4>Aqua Dance Stage</h4>
+                            <p>A giant shower with dozens of powerful jets located at the entrance to the Water Park will make you feel excited and excited. You will not be surprised when standing right in the center to be massaged by the powerful jets of water. Join and discover this unforgettable feeling!
+                            </p>
+                            <a href="/playground" class="wp_button">Buy Ticket</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wp_bottom_padder50">
+                    <div class="wp_event_caption">
+                        <div class="wp_event_img">
+                            <img src="{{asset('assets/client/images/playground/6.jpg')}}" alt="" class="img-responsive">
+                        </div>
+                        <div class="wp_event_text">
+                            <h4>Rope Swing Overcom Waterfall</h4>
+                            <p>You must know how to swim! You will slide on a 10m high rope stretched across the lake and fall into the water at a depth of 2.5m. Remember when you fall down, turn around beautifully! There will be applause for you.
+                            </p>
+                            <a href="/playground" class="wp_button">Buy Ticket</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="/playground"  class="wp_button">See more</a>
                 </div>
             </div>
         </div>

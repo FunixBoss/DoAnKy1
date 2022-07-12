@@ -4,11 +4,12 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="wp_footer_content">
-                    <img src="{{asset('assets/client/images/logo.png')}}" alt="">
+                    <img width=300 src="{{asset('assets/client/images/logo.png')}}" alt="">
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/gallery">Gallery</a></li>
-                        <li><a href="/event">Events</a></li>
+                        <li><a href="/fare">Fare</a></li>
+                        <li><a href="/playground">Playground</a></li>
                         <li><a href="/contact">Contact</a></li>
                         <li><a href="/about">About</a></li>
                     </ul>
@@ -16,7 +17,7 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="wp_footer_contact">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <i class="fa-solid fa-location-dot"></i>
                     <h2>Address</h2>
                     <p>35/6 D5 Street, Binh Thanh District<br>Ho Chi Minh City, Vietnam</p>
                 </div>
