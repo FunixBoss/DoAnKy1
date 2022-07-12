@@ -53,5 +53,8 @@
                     </div>
                 </div>
             </div>
+            <div>
+                <a href="/fare" class="wp_button">Buy Ticket</a>
+            </div>
         </div>
     </div>

@@ -1,27 +1,14 @@
 @extends('client.master')
 @section('title')
-    <title>Keansburg Waterpark | Event Single</title>
+    <title>Keansburg Waterpark | Fare</title>
 @endsection
 
 @section('main_content')
-    <!-- breadcrumb section start -->
-    <div class="wp_bread_wrapper">
-        <img src="{{ asset('assets/client/images/shape2.png') }}" alt="" class="img-responsive shape2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="wp_bread_caption">
-                        <h1>Fare</h1>
-                        <ul class="breadcrumb">
-                            <li><a href="/">Home</a></li>
-                            <li>Fare</li>
-                        </ul>
-                        <h2>Only <i>1 ticket , Enjoy all day</i> 36 game <br />devices at <i>Keansburg Water Park</i></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @extends('client.components.breadcrumb')
+    @section('breadcrumb')
+        Fare
+    @endsection
+
     <!-- event single page start -->
     <div class="wp_event_single_wrapper wp_top_padder100 wp_bottom_padder100">
         <div class="container">
@@ -30,79 +17,121 @@
                     <div class="widget_area">
                         <div class="widget widget_fare">
                             <div class="panel panel-info">
-                                <!-- Default panel contents -->
+                                <div class="panel-heading">Actitvies</div>
+                                <div class="panel-body">
+                                    <!-- Table -->
+                                    <table class="table table-striped widget_fare_activity">
+                                        <thead>
+                                            <td>Opening Hours</td>
+                                            <td class="warning">Stop Selling Tickets: 16h30</td>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Monday - Saturday</td>
+                                                <td>8:30 - 18:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sunday</td>
+                                                <td>8:00 - 18:30</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="panel panel-info">
                                 <div class="panel-heading">Keansburg Water Park Ticket Price</div>
                                 <div class="panel-body">
                                     <!-- Table -->
-                                <table class="table table-striped">
-                                    <thead>
-                                        <td>Type</td>
-                                        <td>Fare</td>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <table class="table table-striped widget_fare_price">
+                                        <thead>
+                                            <td>Type</td>
+                                            <td>Fare</td>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Kid  (Height less than 1m4)</td>
+                                                <td>$10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Student</td>
+                                                <td>$15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Adult</td>
+                                                <td>$20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Saturday, Sunday</td>
+                                                <td>Increase 20%</td>
+                                            </tr>
+                                            <tr>
+                                                <td> Consignment ticket	(Send Items)</td>
+                                                <td>$2</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
 
                             </div>
-                        </div>
-                        <div class="widget widget_upcoming_events">
-                            <h4 class="widget-title">Up Coming Events</h4>
-                            <ul>
-                                <li>
-                                    <img src="{{ asset('assets/client/images/sidebar/b1.jpg') }}" alt=""
-                                        class="img-responsive">
-                                    <div class="post">
-                                        <h4><a href="#">Lorem ipsum dolor</a></h4>
-                                        <p><a href="#">1 March 2018 | 6:25 AM</a></p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="{{ asset('assets/client/images/sidebar/b2.jpg') }}" alt=""
-                                        class="img-responsive">
-                                    <div class="post">
-                                        <h4><a href="#">Lorem ipsum dolor</a></h4>
-                                        <p><a href="#">1 March 2018 | 6:25 AM</a></p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="{{ asset('assets/client/images/sidebar/b3.jpg') }}" alt=""
-                                        class="img-responsive">
-                                    <div class="post">
-                                        <h4><a href="#">Lorem ipsum dolor</a></h4>
-                                        <p><a href="#">1 March 2018 | 6:25 AM</a></p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="widget widget_tags">
-                            <h4 class="widget-title">Tags</h4>
-                            <a href="#" class="wp_button">Games</a>
-                            <a href="#" class="wp_button">Matches</a>
-                            <a href="#" class="wp_button">News</a>
-                            <a href="#" class="wp_button">Tennis</a>
-                            <a href="#" class="wp_button">Up Comming Match</a>
-                            <a href="#" class="wp_button">Games</a>
-                            <a href="#" class="wp_button">Matches</a>
-                            <a href="#" class="wp_button">News</a>
-                        </div>
-                        <div class="widget widget_social_icons">
-                            <h4 class="widget-title">Follow Us</h4>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            </ul>
+                            <div class="panel panel-info">
+                                <div class="panel-heading">Buy Ticket Online</div>
+                                <div class="panel-body">
+                                    <!-- Table -->
+                                    <table class="table table-striped widget_fare_buy-ticket">
+                                        <thead>
+                                            <tr>
+                                                <td width="35%">Ticket Type</td>
+                                                <td width="35%" class="number">Number</td>
+                                                <td width="15%">Price</td>
+                                                <td width="15%">Total</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Kid (Height less than 1m4)</td>
+                                                <td><input type="number" name="kid_ticket" id="kid" class="ticket_amount" value="0" min="0" max="100" ></td>
+                                                <td>$10</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Student</td>
+                                                <td><input type="number" name="student_ticket" id="student" class="ticket_amount" value="0" min="0" max="100"></td>
+                                                <td>$15</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Adult</td>
+                                                <td><input type="number" name="adult_ticket" id="adult" class="ticket_amount" value="0" min="0" max="100"></td>
+                                                <td>$20</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">Total</td>
+                                                <td>0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <button class="wp_button button_fare">Buy Ticket Online</button>
+                                </div>
+
+                            </div>
+
+                            <div class="overview">
+                                <h3>You come to have fun at the Water Park.
+                                </h3>
+                                <p>Let's challenge 36 game devices to enjoy the wonderful sensations of each game. Not only bring you fun, games are also seen as challenges. Overcoming all 36 challenges of the game, you will be stronger when facing challenges in life.</p>
+                                <p>If you go with children and the elderly can immerse themselves in the clear blue water of the activity lake, solar massage pool, wave pool and children's pool. The fountain square with powerful jets of water, the water jet massage area helps to stimulate resistance as well as restore bone and joint function… Children and the elderly can enjoy playing in this area.</p>
+                                <p>And if you want to relax , can lie on the float, drop your soul into nature and watch the green arches and caves, then experience the Lazy River - Wild River.</p>
+                                <p>Only 1 ticket, having fun all day at Dam Sen Water Park is not only one of the familiar entertainment centers of the city people but also a place to bring comfort and entertainment for children. children after months of intense study. Children's holidays will be more fun when they play with their parents with the family of Elephants, Hippos, ... where childhood paradise shimmers with colors full of slides dedicated to babies.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+@endsection
+@section('script')
+
+
 @endsection

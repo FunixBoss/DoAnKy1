@@ -321,6 +321,76 @@ button:focus {
 	color: #fff;
 	background: #3dcaf6;
 }
+
+.widget.widget_fare{
+    font-size: 2rem;
+}
+.widget.widget_fare .panel-heading{
+    background: #005b9f;
+    color: white;
+}
+.widget.widget_fare thead {
+    background: #5eb8ff;
+    border-radius: 30px;
+}
+.widget.widget_fare .widget_fare_activity td{
+    width: 50%;
+}
+.widget.widget_fare .widget_fare_price td{
+    width: 50%;
+}
+.widget.widget_fare td:last-child{
+    text-align: center;
+}
+.widget.widget_fare td.warning{
+    background: #ff5983
+}
+.widget_fare_buy-ticket tr td:nth-child(2){
+    text-align: center;
+}
+
+.ticket_number{
+    margin: 0 auto;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: white; */
+    /* box-shadow: 0 20px 30px rgba(0,0,0,0.1); */
+    border-radius: 30px;
+}
+input[type=number]{
+    text-align: center;
+    font-size: 2rem;
+    border: none;
+    max-width: 100%;
+    width: 100px;
+
+    background-color: white;
+    color: #202030;
+    border: 1px solid #ccc;
+}
+
+
+
+.panel{
+    margin-bottom: 100px;
+}
+.button_fare{
+    display: block;
+    margin: 0 auto;
+}
+.widget.widget_fare .overview h3 {
+    font-size: 3rem;
+    color: #005cb2;
+    font-weight: 500;
+}
+.widget.widget_fare .overview p {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #6ab7ff;
+}
 /*-------- loader section start --------*/
 #loader{
 	background-color: #b8dbe6;
@@ -460,6 +530,7 @@ button:focus {
 	padding: 50px 0px;
 	z-index: 3;
 }
+
 .menu_fixed{
 	background: #3dcaf6;
 	position: fixed;
@@ -496,9 +567,10 @@ button:focus {
 	width: 350px;
 }
 .wp_nav_logo{
-	text-align: center;
-	margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 40px;
 }
+
 .wp_navigation_menu ul{
 	list-style: none;
 	padding: 0;
@@ -696,12 +768,12 @@ button:focus {
 .wp_about_img:before{
 	position: absolute;
 	content:"";
-	top: -20px;
-	right: -20px;
+	top: -15px;
+	right: -45px;
 	border-radius:10px;
 	border:2px solid #3dcaf6;
-	width: 100%;
-	height: 100%;
+	width: 105%;
+	height: 75%;
 	z-index: -1;
 	-webkit-transition:all 0.3s;
 	-moz-transition:all 0.3s;
@@ -710,8 +782,6 @@ button:focus {
 	transition:all 0.3s;
 }
 .wp_about_img:hover:before{
-	top: -15px;
-	right: -15px;
 	background: #3dcaf6;
 }
 /*-------- gallery section start --------*/
@@ -825,6 +895,10 @@ button:focus {
 	font-size: 20px;
 	margin-bottom: 15px;
 }
+.wp_service_wrapper div a.wp_button{
+    left: 50%;
+    transform: translateX(-50%);
+}
 /*-------- pricing section start --------*/
 .wp_pricing_wrapper{
 	background: #f5f5f5;
@@ -911,11 +985,16 @@ button:focus {
 }
 /*-------- event section start --------*/
 .wp_event_text{
+    min-height: 300px;
 	padding: 20px 30px;
 	border:2px solid #3dcaf6;
 	border-radius: 10px;
 	width: 60%;
 	float: left;
+}
+.wp_event_wrapper a.wp_button{
+    left: 50%;
+    transform: translateX(-50%);
 }
 .wp_event_text h4{
 	font-size: 25px;
@@ -945,8 +1024,14 @@ button:focus {
 	-ms-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
+    width: 470px;
+    height: 350px;
+    overflow: hidden;
 }
 .wp_event_img img{
+    width: 100%;
+    min-height: 350px;
+    height: 100%;
 	display: inline-block;
 }
 .wp_event_img a{
@@ -978,6 +1063,8 @@ button:focus {
 	transform: translateY(-50%);
 }
 .wp_event_caption.left_img .wp_left_event_img img{
+    width: 470px;
+    height: 350px;
 	display: inline-block;
 }
 .wp_event_caption.left_img .wp_left_event_img a{
@@ -1129,11 +1216,12 @@ iframe{
 	margin-bottom: 20px;
 }
 .wp_bread_caption h2{
+    transform: translateY(100px);
     font-size: 40px;
     color: #fff;
     margin-top: 10px;
 }
-.wp_bread_caption i{
+.wp_bread_caption h2 i{
     color:#c50e29;
 }
 .wp_bread_caption ul{
@@ -1593,6 +1681,7 @@ iframe{
 }
 }
 @media(max-width:991px){
+
 .wp_about_img img{
 	width: 100%;
 }

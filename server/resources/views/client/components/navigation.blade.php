@@ -1,7 +1,9 @@
 <div class="wp_navigation_menu">
     <button class="wp_close_btn"><i class="fa fa-times"></i></button>
     <div class="wp_nav_logo">
-        <a href="/"><img width="250" src="{{asset('assets/client/images/logo.png')}}" alt="Keansburg Waterpark"></a>
+        <a href="/">
+            <img src="{{asset('assets/client/images/logo.png')}}" alt="Keansburg Waterpark">
+        </a>
     </div>
     <ul>
         <li class=""><a href="/"><i class="fa-solid fa-house-chimney"></i></i></i>Home</a></li>
