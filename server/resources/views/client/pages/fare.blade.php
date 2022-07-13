@@ -76,6 +76,16 @@
                             <div class="panel panel-info">
                                 <div class="panel-heading">Buy Ticket Online</div>
                                 <div class="panel-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <td>Choose a day</td>
+                                                <td>
+                                                    <input type="date" name="" id="">
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                    </table>
                                     <!-- Table -->
                                     <table class="table table-striped widget_fare_buy-ticket">
                                         <thead>
@@ -89,19 +99,31 @@
                                         <tbody>
                                             <tr>
                                                 <td>Kid (Height less than 1m4)</td>
-                                                <td><input type="number" name="kid_ticket" id="kid" class="ticket_amount" value="0" min="0" max="100" ></td>
+                                                <td class="ticket_number">
+                                                    <span class="decrement" onclick="ticketCount(this, 'kid')"> - </span>
+                                                    <input type="number" name="kid_ticket" id="kid" class="ticket_amount" value="0" min="0" max="100">
+                                                    <span class="increment" onclick="ticketCount(this, 'kid')"> + </span>
+                                                </td>
                                                 <td>$10</td>
                                                 <td>0</td>
                                             </tr>
                                             <tr>
                                                 <td>Student</td>
-                                                <td><input type="number" name="student_ticket" id="student" class="ticket_amount" value="0" min="0" max="100"></td>
+                                                <td class="ticket_number">
+                                                    <span class="decrement" onclick="ticketCount(this, 'student')"> - </span>
+                                                    <input type="number" name="student_ticket" id="student" class="ticket_amount" value="0" min="0" max="100">
+                                                    <span class="increment" onclick="ticketCount(this, 'student')"> + </span>
+                                                </td>
                                                 <td>$15</td>
                                                 <td>0</td>
                                             </tr>
                                             <tr>
                                                 <td>Adult</td>
-                                                <td><input type="number" name="adult_ticket" id="adult" class="ticket_amount" value="0" min="0" max="100"></td>
+                                                <td class="ticket_number">
+                                                    <span class="decrement" onclick="ticketCount(this, 'adult')"> - </span>
+                                                    <input type="number" name="adult_ticket" id="adult" class="ticket_amount" value="0" min="0" max="100">
+                                                    <span class="increment" onclick="ticketCount(this, 'adult')"> + </span>
+                                                </td>
                                                 <td>$20</td>
                                                 <td>0</td>
                                             </tr>

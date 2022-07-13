@@ -371,6 +371,20 @@ input[type=number]{
     border: 1px solid #ccc;
 }
 
+    .widget_fare_buy-ticket td span{
+    background: #3dcaf6;
+    width: 40px;
+    padding: 2px 5px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.decrement{
+    border-radius: 15px 0 0 15px;
+}
+.increment{
+    border-radius: 0 15px 15px 0px;
+}
+
 
 
 .panel{
