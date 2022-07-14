@@ -26,12 +26,7 @@
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
 
-                                    @if (Session::has('error'))
-                                    <div class="alert alert-success alert-block">
-                                        <button type="button" class="close"  data-dismiss="alert">x</button>
-                                        <strong>{{Session::get('error')}}</strong>
-                                    </div>
-                                    @endif
+                                    @include('errors')
 
                                     {{-- <form class="user" action="{{route('postLogin')}}" method="POST"> --}}
                                     <form class="user"  method="POST" action="{{route('postLogin')}}">

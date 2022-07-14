@@ -6,6 +6,10 @@
         </a>
     </div>
     <ul>
+        @if(Auth::check())
+        <li><i class="fa-solid fa-arrow-right-to-bracket"></i>{{Auth::User()->email}}</li>
+        @endif
+
         <li class=""><a href="/"><i class="fa-solid fa-house-chimney"></i></i></i>Home</a></li>
         <li><a href="/gallery"><i class="fa-solid fa-images"></i></i>Gallery</a></li>
         <li><a href="/fare"><i class="fa fa-ticket" aria-hidden="true"></i></i>Fare</a></li>

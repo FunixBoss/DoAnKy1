@@ -17,12 +17,7 @@
                     <div class="container-fluid">
                         <!-- Page Heading -->
                         <h1 class="h3 mb-2 text-gray-800">Member List</h1>
-                        @if (Session::has('success'))
-                            <div class="alert alert-success alert-block">
-                                <button type="button" class="close"  data-dismiss="alert">x</button>
-                                <strong>{{Session::get('success')}}</strong>
-                            </div>
-                        @endif
+                        @include('errors')
                         
 
                         <!-- DataTales Example -->
@@ -55,13 +50,12 @@
                                                     
                                                     <td>{{ date('h:i:s - d/m/y', strtotime($member->created_at))}}</td>
                                                     <td>
-                                                        {{-- <a href="{{ Route('admin.member.edit', ['id' => $member->id]) }}">Edit</a> --}}
-                                                        edit
+                                                        <a href="{{ Route('admin.member.edit', ['id' => $member->customer_id]) }}">Edit</a>
+                                                        
                                                     </td>
                                                     <td>
-                                                        {{-- <a onclick="return confirmDelete()" href="{{ Route('admin.member.delete', ['id' => $member->id]) }}">Delete</a> --}}
+                                                        <a onclick="return confirmDelete()" href="{{ Route('admin.member.delete', ['id' => $member->customer_id]) }}">Delete</a>
                                                         
-                                                        delete
                                                     </td>
                                                 </tr>
                                             @empty
