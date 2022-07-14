@@ -51,6 +51,7 @@
 
                                 </div>
                                 
+<<<<<<< HEAD
                                 <div class="form-group">
                                     <select name="level">
                                         <option value="1">Admin</option>
@@ -61,6 +62,9 @@
                                 <div class="form-group-row" style="margin-bottom: 10px;">
                                     <input type="file" name="avatar">
                                 </div>
+=======
+                                
+>>>>>>> 8a64becbafeba0eb837456f1010e967f1b5f93c7
                                 <input type="submit" value="Register" class="btn btn-primary btn-user btn-block">
                                 <hr>
                                 <a href="" class="btn btn-google btn-user btn-block">
