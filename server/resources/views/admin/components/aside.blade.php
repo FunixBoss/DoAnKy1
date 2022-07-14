@@ -27,24 +27,30 @@
     <div class="sidebar-heading">
         Addons
     </div>
-    <!-- Nav Item - Charts -->
     <li class="nav-item">
         <a class="nav-link" href="{{route("admin.member.index")}}">
             <i class="fas fa-fw fa-users"></i>
-            <span>Member</span></a>
+            <span>Members</span>
+        </a>
     </li>
-    <!-- Nav Item - Charts -->
-    <li class="nav-item">
-        <a class="nav-link" href="{{route("admin.category.index")}}">
-            <i class="fas fa-fw fa-box-open"></i>
-            <span>Category</span></a>
-    </li>
-
-    <!-- Nav Item - Tables -->
     <li class="nav-item">
         <a class="nav-link" href="{{route("admin.product.index")}}">
-            <i class="fas fa-fw fa-box"></i>
-            <span>Product</span></a>
+            <i class="fas fa-ticket-alt" ></i>
+            <span>Tickets</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{route("admin.product.index")}}">
+            <i class="fas fa-comment"></i>
+            <span>Comments</span>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{route("admin.product.index")}}">
+            <i class="far fa-address-book"></i>
+            <span>Contact</span>
+        </a>
     </li>
 
     <!-- Divider -->

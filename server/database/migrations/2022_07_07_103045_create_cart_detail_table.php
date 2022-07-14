@@ -16,12 +16,17 @@ class CreateCartDetailTable extends Migration
         Schema::create('cart_detail', function (Blueprint $table) {
             $table->increments('cart_detail_id');
 <<<<<<< HEAD
+<<<<<<< HEAD
             $table->integer('cart_id');
             $table->integer('ticket_id');
 =======
             $table->integer('cart_id')->unsigned();
             $table->integer('ticket_id')->unsigned();
 >>>>>>> 3c579c605a131a940bc7143716726a667bf63c48
+=======
+            $table->integer('cart_id')->unsigned();
+            $table->integer('ticket_id')->unsigned();
+>>>>>>> cart
             $table->integer('quantity');
             $table->integer('price');
 

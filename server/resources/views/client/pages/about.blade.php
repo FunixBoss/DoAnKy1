@@ -1,12 +1,13 @@
 @extends('client.master')
 @section('title')
-    <title>Keansburg Waterpark | About</title>
+    <title>Keansburg Water Park | About</title>
 @endsection
 @section('main_content')
     @extends('client.components.breadcrumb')
     @section('breadcrumb')
         About
     @endsection
+
     <!-- about section start -->
     <div class="wp_about_wrapper wp_top_padder100 wp_bottom_padder50">
         <div class="container">

@@ -40,10 +40,10 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="wp_social_icons">
                     <ul>
-                        <li><a href="#!"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#!"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#!"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                        <li><a href="#!"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#!"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#!"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#!"><i class="fa-brands fa-google-plus-g"></i>/a></li>
+                        <li><a href="#!"><i class="fa-brands fa-linkedin"></i></a></li>
                     </ul>
                 </div>
             </div>
