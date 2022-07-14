@@ -329,7 +329,7 @@ button:focus {
     background: #005b9f;
     color: white;
 }
-.widget.widget_fare thead {
+.widget.widget_fare  thead {
     background: #5eb8ff;
     border-radius: 30px;
 }
@@ -348,6 +348,17 @@ button:focus {
 .widget_fare_buy-ticket tr td:nth-child(2){
     text-align: center;
 }
+.ticket_date{
+	text-align: center;
+	border: 1px solid black;
+}
+.ticket_date.active{
+	background: #3dcaf6;
+}
+.ticket_date:hover{
+	background: #3dcaf6;
+	transition: .2s all ease-in;
+}
 
 .ticket_number{
     margin: 0 auto;
@@ -363,18 +374,17 @@ input[type=number]{
     text-align: center;
     font-size: 2rem;
     border: none;
-    max-width: 100%;
-    width: 100px;
-
+	max-width: 100px;
     background-color: white;
     color: #202030;
     border: 1px solid #ccc;
 }
-
-    .widget_fare_buy-ticket td span{
+input[type=number]::-webkit-inner-spin-button{
+	display:none
+}
+.widget_fare_buy-ticket td span{
     background: #3dcaf6;
-    width: 40px;
-    padding: 2px 5px;
+    padding: 2px 10px;
     font-size: 2rem;
     cursor: pointer;
 }

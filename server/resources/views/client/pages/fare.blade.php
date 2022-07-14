@@ -78,22 +78,44 @@
                                 <div class="panel-body">
                                     <table class="table">
                                         <thead>
-                                            <tr>
-                                                <td>Choose a day</td>
-                                                <td>
-                                                    <input type="date" name="" id="">
-                                                </td>
+                                            <tr >
+                                                <td colspan="12">Select A Day</td>
                                             </tr>
                                         </thead>
+                                        
+                                        <tbody>
+                                            @php
+                                                $date = date('y-m-d');
+                                                $time = strtotime($date);
+                                            @endphp
+                                            
+                                            
+                                            @for ($i = 0; $i < 4; $i++)
+                                                <tr class="row">
+                                                    @for ($j = 0; $j < 4; $j++ )
+                                                        <td class="col-3 ticket_date m-3">{{date('D d-m', $time)}}</td>
+                                                        @php
+                                                            $time += 86400
+                                                            
+                                                        @endphp
+                                                    @endfor
+                                                </tr>
+                                                    
+                                            @endfor
+                                            
+                                                
+                                            
+                                        </tbody>
+                                    
                                     </table>
                                     <!-- Table -->
                                     <table class="table table-striped widget_fare_buy-ticket">
                                         <thead>
-                                            <tr>
-                                                <td width="35%">Ticket Type</td>
-                                                <td width="35%" class="number">Number</td>
-                                                <td width="15%">Price</td>
-                                                <td width="15%">Total</td>
+                                            <tr >
+                                                <td width="40%">Ticket Type</td>
+                                                <td width="20%" class="number">Number</td>
+                                                <td width="20%">Price</td>
+                                                <td width="20%">Total</td>
                                             </tr>
                                         </thead>
                                         <tbody>
