@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\LoginController;
 
+use App\Http\Controllers\Client\CartController;
 use App\Http\Controllers\Client\PageController;
 
 
@@ -19,6 +20,8 @@ Route::get('/fare', [PageController::class, 'fare'])->name('fare');
 Route::get('/playground', [PageController::class, 'playground'])->name('playground');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+
+// Authentication
 Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('CheckLogout');
 Route::post('/login', [loginController::class, 'postLogin'])->name('postLogin');
 Route::get('/register', [loginController::class, 'register'])->middleware('CheckLogout')->name('register');
@@ -26,13 +29,16 @@ Route::post('/register', [loginController::class, 'postRegister'])->middleware('
 Route::post('/logout', [loginController::class, 'getLogout'])->name('getLogout');
 
 
+// User Cart
+Route::get('/cart', [PageController::class, 'cart'])->name('cart');
+
 
 
 
 // Server-side Routes
 Route::prefix('admin')->name('admin.')->middleware(['CheckLogin','CheckAdmin'])->group(function(){
     Route::get('/', function(){
-        return view('admin.index');
+        return view('admin.pages.index');
     });
     Route::redirect('/index', '/admin');
 

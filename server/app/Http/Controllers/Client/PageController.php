@@ -34,4 +34,8 @@ class PageController extends Controller
     public function playground () {
         return view ('client.pages.playground');
     }
+
+    public function cart () {
+        return view ('client.pages.cart');
+    }
 }
