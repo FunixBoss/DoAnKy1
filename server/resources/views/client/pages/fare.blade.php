@@ -48,18 +48,20 @@
                                             <td>Fare</td>
                                         </thead>
                                         <tbody>
+                                            @foreach ($tickets as $ticket)
                                             <tr>
-                                                <td>Kid  (Height less than 1m4)</td>
-                                                <td>$10</td>
+                                                
+                                                <td>{{ucfirst($ticket->ticket_name)}} 
+                                                    @if (!$ticket->ticket_description == '')
+                                                        ({{$ticket->ticket_description}})</td>
+                                                    @else
+                                                        {{$ticket->ticket_description}}</td>
+                                                    @endif
+                                                <td>${{$ticket->ticket_price}}</td>
+                                                
+                                                
                                             </tr>
-                                            <tr>
-                                                <td>Student</td>
-                                                <td>$15</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Adult</td>
-                                                <td>$20</td>
-                                            </tr>
+                                            @endforeach
                                             <tr>
                                                 <td>Saturday, Sunday</td>
                                                 <td>Increase 20%</td>
@@ -73,6 +75,7 @@
                                 </div>
 
                             </div>
+
                             <div class="panel panel-info">
                                 <div class="panel-heading">Buy Ticket Online</div>
                                 <div class="panel-body">
@@ -93,7 +96,7 @@
                                             @for ($i = 0; $i < 4; $i++)
                                                 <tr class="row">
                                                     @for ($j = 0; $j < 4; $j++ )
-                                                        <td class="col-3 ticket_date m-3">{{date('D d-m', $time)}}</td>
+                                                        <td class="col-3 ticket_date">{{date('D d-m', $time)}}</td>
                                                         @php
                                                             $time += 86400
                                                             
@@ -109,7 +112,7 @@
                                     
                                     </table>
                                     <!-- Table -->
-                                    <table class="table table-striped widget_fare_buy-ticket">
+                                    <table class="table table-striped widget_fare_buy-ticket d-none">
                                         <thead>
                                             <tr >
                                                 <td width="40%">Ticket Type</td>
@@ -119,44 +122,41 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ($tickets as $ticket)
                                             <tr>
-                                                <td>Kid (Height less than 1m4)</td>
+                                                <td>{{ucfirst($ticket->ticket_name)}} 
+                                                    @if (!$ticket->ticket_description == '')
+                                                        ({{$ticket->ticket_description}})</td>
+                                                    @else
+                                                        {{$ticket->ticket_description}}</td>
+                                                    @endif
+                                                
+                                                @php
+                                                    
+                                                @endphp
                                                 <td class="ticket_number">
-                                                    <span class="decrement" onclick="ticketCount(this, 'kid')"> - </span>
-                                                    <input type="number" name="kid_ticket" id="kid" class="ticket_amount" value="0" min="0" max="100">
-                                                    <span class="increment" onclick="ticketCount(this, 'kid')"> + </span>
+                                                    <button class="decrement" onClick="ticketCount(this, '{{$ticket->ticket_name}}', {{$ticket->ticket_price}})"> - </button>
+                                                    <input type="number" name="{{$ticket->ticket_name}}_ticket" id="{{$ticket->ticket_name}}"class="ticket_amount" value="0" min="0" max="100">
+                                                    <button class="increment" onClick="ticketCount(this, '{{$ticket->ticket_name}}', {{$ticket->ticket_price}})"> + </button>
                                                 </td>
-                                                <td>$10</td>
-                                                <td>0</td>
+                                                <td>${{$ticket->ticket_price}}</td>
+                                                <td class="total" id="total_{{$ticket->ticket_name}}">0</td>
+                                                
                                             </tr>
-                                            <tr>
-                                                <td>Student</td>
-                                                <td class="ticket_number">
-                                                    <span class="decrement" onclick="ticketCount(this, 'student')"> - </span>
-                                                    <input type="number" name="student_ticket" id="student" class="ticket_amount" value="0" min="0" max="100">
-                                                    <span class="increment" onclick="ticketCount(this, 'student')"> + </span>
-                                                </td>
-                                                <td>$15</td>
-                                                <td>0</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Adult</td>
-                                                <td class="ticket_number">
-                                                    <span class="decrement" onclick="ticketCount(this, 'adult')"> - </span>
-                                                    <input type="number" name="adult_ticket" id="adult" class="ticket_amount" value="0" min="0" max="100">
-                                                    <span class="increment" onclick="ticketCount(this, 'adult')"> + </span>
-                                                </td>
-                                                <td>$20</td>
-                                                <td>0</td>
-                                            </tr>
+                                            @endforeach
+                                            
+                                            
                                             <tr>
                                                 <td colspan="3">Total</td>
-                                                <td>0</td>
+                                                <td id="total_all">0</td>
                                             </tr>
+                                            
                                         </tbody>
+                                        
                                     </table>
-                                    <button class="wp_button button_fare">Buy Ticket Online</button>
+                                    <button class="wp_button button_fare d-none">Buy Ticket Online</button>
                                 </div>
+
 
                             </div>
 
