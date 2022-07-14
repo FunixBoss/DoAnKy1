@@ -3,7 +3,7 @@
 namespace App\Http\Requests\Member;
 
 use Illuminate\Foundation\Http\FormRequest;
-
+use rule;
 class UpdateRequest extends FormRequest
 {
     /**
@@ -24,8 +24,8 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'username' => 'required|unique:members,username,'.$this->id,
-            'fullname' => 'required'
+            'username'=>"required"    ,
+            'fullname' => 'required',
         ];
     }
     public function messages()

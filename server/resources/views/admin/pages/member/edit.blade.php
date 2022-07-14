@@ -57,8 +57,8 @@
                                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                                     <select name="level">
                                                         <option value="">Please choose level</option>
-                                                        <option value="1" {{$member->level == 1 ? 'selected' : ''}}>Admin</option>
-                                                        <option value="2" {{$member->level == 1 ? 'selected' : ''}}>Member</option>
+                                                        <option value="1" {{$member->level == '1' ? 'selected' : ''}}>Admin</option>
+                                                        <option value="2" {{$member->level == '2' ? 'selected' : ''}}>Member</option>
                                                     </select>
                                                 </div>
                                             </div>

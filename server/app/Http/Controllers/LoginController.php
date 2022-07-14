@@ -27,7 +27,7 @@ class LoginController extends Controller
 
             }
         } else {
-            return redirect()->back()->with('status', 'Email hoặc Password không chính xác');
+            return redirect()->back()->with('error', 'Email hoặc Password không chính xác');
         }
         // return view('admin.login');
         // return admin::all();

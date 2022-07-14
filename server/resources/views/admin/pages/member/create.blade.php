@@ -26,15 +26,7 @@
                                         <div class="text-center">
                                             <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                                         </div>
-                                        @if ($errors->any())
-                                            <div class="alert alert-danger">
-                                                <ul>
-                                                    @foreach ($errors->all() as $error)
-                                                        <li>{{ $error }}</li>
-                                                    @endforeach
-                                                </ul> 
-                                            </div>
-                                        @endif
+                                        @include('errors')
                                         <form class="user" action="{{route('admin.member.store')}}" method="POST">
                                             @csrf
                                             <div class="form-group row" >

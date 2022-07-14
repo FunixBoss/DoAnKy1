@@ -16,5 +16,13 @@ class user extends Authenticatable
         'username',
         'fullname',
         'password',
+        'level'
     ];
+    protected function getNameAttribute(): Attribute
+    {
+        return Attribute::make(
+            get: fn ($value) => ucfirst($value),
+        );
+    }
+    
 }
