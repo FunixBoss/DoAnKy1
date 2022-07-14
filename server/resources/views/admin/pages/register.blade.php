@@ -25,11 +25,7 @@
 
                                 @csrf
                                 <div class="form-group row" >
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" name="username" class="form-control form-control-user" id="exampleFirstName"
-                                            placeholder="Username">
-                                    </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-12">
                                         <input type="text" name="fullname" class="form-control form-control-user" id="exampleLastName"
                                             placeholder="Your Full Name">
                                     </div>
@@ -38,7 +34,7 @@
                                     <input type="email" name="email" class="form-control form-control-user" id="exampleInputEmail"
                                         placeholder="Email Address">
                                 </div>
-                                
+
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="password" name="password" class="form-control form-control-user"
@@ -50,34 +46,19 @@
                                     </div>
 
                                 </div>
-                                
-<<<<<<< HEAD
-                                <div class="form-group">
-                                    <select name="level">
-                                        <option value="1">Admin</option>
-                                        <option value="2" selected >Member</option>
-                                    </select>
-                                   
-                                </div>
-                                <div class="form-group-row" style="margin-bottom: 10px;">
-                                    <input type="file" name="avatar">
-                                </div>
-=======
-                                
->>>>>>> 8a64becbafeba0eb837456f1010e967f1b5f93c7
+
+
                                 <input type="submit" value="Register" class="btn btn-primary btn-user btn-block">
-                                <hr>
-                                <a href="" class="btn btn-google btn-user btn-block">
+                                {{-- <hr> --}}
+                                {{-- <a href="" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> Register with Google
                                 </a>
                                 <a href="" class="btn btn-facebook btn-user btn-block">
                                     <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                                </a>
+                                </a> --}}
                             </form>
                             <hr>
-                            <div class="text-center">
-                                <a class="small" href="">Forgot Password?</a>
-                            </div>
+
                             <div class="text-center">
                                 <a class="small" href="/login">Already have an account? Login!</a>
                             </div>

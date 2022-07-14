@@ -1,6 +1,6 @@
 @extends('client.master')
 @section('title')
-    <title>Keansburg Waterpark | Contact</title>
+    <title>Keansburg Water Park | Contact</title>
 @endsection
 @section('main_content')
     <!-- map section start -->
@@ -76,12 +76,10 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <a href="#!"><i class="fa fa-facebook"></i></a>
-                                <a href="#!"><i class="fa fa-instagram"></i></a>
-                                <a href="#!"><i class="fa fa-pinterest"></i></a>
-                                <a href="#!"><i class="fa fa-linkedin"></i></a>
-                                <a href="#!"><i class="fa fa-twitter"></i></a>
-                                <a href="#!"><i class="fa fa-google-plus"></i></a>
+                                <a href="#!"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#!"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#!"><i class="fa-brands fa-google-plus-g"></i></a>
+                                <a href="#!"><i class="fa-brands fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>

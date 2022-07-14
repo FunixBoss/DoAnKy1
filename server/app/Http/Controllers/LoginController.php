@@ -1,24 +1,25 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Foundation\Auth\User as Authenticatable;   
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Http\Request;
 use App\Models\admin;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use App\Models\customer;
+use App\Models\Users;
 class LoginController extends Controller
 {
     public function login(){
-        return view('admin.login');
+        return view('admin.pages.login');
         // return admin::all();
     }
 
     public function postLogin(Request $request){
         $login = [
             'email' => $request->email,
-            'password' => $request->password,   
+            'password' => $request->password,
         ];
+        // dd('asd');
         if (Auth::attempt($login)) {
             if(Auth::User()->level ==1){
                 return redirect()->route('admin.member.index');
@@ -33,10 +34,10 @@ class LoginController extends Controller
         // return admin::all();
     }
     public function register () {
-        return view ('admin.register');
+        return view ('admin.pages.register');
     }
     public function postRegister (Request $request) {
-        $obj = new customer;
+        $obj = new Users;
         $obj->username = $request->username;
         $obj->fullname = $request->fullname;
         $obj->email = $request->email;

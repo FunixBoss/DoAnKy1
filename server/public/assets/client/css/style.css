@@ -331,7 +331,6 @@ button:focus {
 }
 .widget.widget_fare  thead {
     background: #5eb8ff;
-    border-radius: 30px;
 }
 .widget.widget_fare .widget_fare_activity td{
     width: 50%;
@@ -339,7 +338,7 @@ button:focus {
 .widget.widget_fare .widget_fare_price td{
     width: 50%;
 }
-.widget.widget_fare td:last-child{
+.widget.widget_fare td:not(:first-child){
     text-align: center;
 }
 .widget.widget_fare td.warning{
@@ -351,13 +350,15 @@ button:focus {
 .ticket_date{
 	text-align: center;
 	border: 1px solid black;
+
 }
 .ticket_date.active{
-	background: #3dcaf6;
+	background: #3dcaf6 !important;
 }
 .ticket_date:hover{
 	background: #3dcaf6;
-	transition: .2s all ease-in;
+	cursor:pointer;
+
 }
 
 .ticket_number{
@@ -366,13 +367,10 @@ button:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: white; */
-    /* box-shadow: 0 20px 30px rgba(0,0,0,0.1); */
-    border-radius: 30px;
 }
 input[type=number]{
     text-align: center;
-    font-size: 2rem;
+    font-size: 16px;
     border: none;
 	max-width: 100px;
     background-color: white;
@@ -382,10 +380,16 @@ input[type=number]{
 input[type=number]::-webkit-inner-spin-button{
 	display:none
 }
-.widget_fare_buy-ticket td span{
+.widget_fare_buy-ticket.d-none,
+button.d-none{
+	display: none;
+    transition: all .3s linear
+}
+.widget_fare_buy-ticket td button{
+	border: none;
     background: #3dcaf6;
     padding: 2px 10px;
-    font-size: 2rem;
+    font-size: 16px;
     cursor: pointer;
 }
 .decrement{
@@ -701,6 +705,24 @@ input[type=number]::-webkit-inner-spin-button{
     background: none;
     border:none;
 }
+
+.wp_navigation_menu form {
+    display: inline-block;
+    margin-bottom: 0;
+}
+.wp_navigation_menu form button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    padding: 0;
+    font-weight: bold;
+}
+.wp_navigation_menu form button:hover {
+    color: inherit
+}
+.wp_navigation_menu .sub-menu li:last-child a i {
+    margin-right: 15px;
+}
 /*-------- banner section start --------*/
 .wp_banner_wrapper{
 	background:-webkit-linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2),rgba(61,202,246,1)),url(../images/banner.jpg);
@@ -774,6 +796,7 @@ input[type=number]::-webkit-inner-spin-button{
 	font-size: 30px;
 	color:#3dcaf6;
 	font-weight: 500;
+    margin-bottom: 30px;
 }
 .wp_about_caption p{
 	margin-top: 20px;

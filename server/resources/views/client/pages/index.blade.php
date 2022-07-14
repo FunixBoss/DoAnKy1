@@ -1,6 +1,6 @@
 @extends('client.master')
 @section('title')
-    <title>Keansburg Water | Home</title>
+    <title>Keansburg Water Park | Home</title>
 @endsection
 
 @section('main_content')
