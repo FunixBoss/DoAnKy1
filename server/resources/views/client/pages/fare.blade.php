@@ -93,7 +93,7 @@
                                             @for ($i = 0; $i < 4; $i++)
                                                 <tr class="row">
                                                     @for ($j = 0; $j < 4; $j++ )
-                                                        <td class="col-3 ticket_date m-3">{{date('D d-m', $time)}}</td>
+                                                        <td class="col-3 ticket_date">{{date('D d-m', $time)}}</td>
                                                         @php
                                                             $time += 86400
                                                             

@@ -18,9 +18,13 @@ input.change(()=>{
 })
 
 // active choosing day
+let dateValue = '';
 function chooseDay(){
     $('.ticket_date').click((e)=>{
-        console.log(e.target)
+        $('.ticket_date').removeClass("active");
+        dateValue = e.target.innerHTML;
+        $(e.target).addClass("active");
+        console.log(dateValue)
     })
 }
 

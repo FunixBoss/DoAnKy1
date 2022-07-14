@@ -351,13 +351,13 @@ button:focus {
 .ticket_date{
 	text-align: center;
 	border: 1px solid black;
+	
 }
 .ticket_date.active{
-	background: #3dcaf6;
+	background: #3dcaf6 !important;
 }
 .ticket_date:hover{
 	background: #3dcaf6;
-	transition: .2s all ease-in;
 	cursor:pointer;
 	
 }
