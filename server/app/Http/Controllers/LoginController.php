@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\admin;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use App\Models\customer;
+use App\Models\Users;
 class LoginController extends Controller
 {
     public function login(){
@@ -19,6 +19,7 @@ class LoginController extends Controller
             'email' => $request->email,
             'password' => $request->password,   
         ];
+        // dd('asd');
         if (Auth::attempt($login)) {
             if(Auth::User()->level ==1){
                 return redirect()->route('admin.member.index');
@@ -36,7 +37,7 @@ class LoginController extends Controller
         return view ('admin.register');
     }
     public function postRegister (Request $request) {
-        $obj = new customer;
+        $obj = new Users;
         $obj->username = $request->username;
         $obj->fullname = $request->fullname;
         $obj->email = $request->email;

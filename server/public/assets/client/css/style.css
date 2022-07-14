@@ -384,7 +384,12 @@ input[type=number]{
 input[type=number]::-webkit-inner-spin-button{
 	display:none
 }
-.widget_fare_buy-ticket td span{
+.widget_fare_buy-ticket.d-none,
+button.d-none{
+	display: none;
+}
+.widget_fare_buy-ticket td button{
+	border: none;
     background: #3dcaf6;
     padding: 2px 10px;
     font-size: 2rem;

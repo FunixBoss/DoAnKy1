@@ -25,7 +25,7 @@
             <form action="{{route('getLogout')}}" method="post">
                 @csrf
                 <button type="submit" style="background: none; border:none">
-                    <a href="/about"><i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>Logout</a>
+                    <button class="btn btn-" type="submit">Logout</button>
                 </button>
             </form>
         </li>

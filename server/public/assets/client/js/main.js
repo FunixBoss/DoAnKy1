@@ -1,5 +1,5 @@
-
-function ticketCount (btn, type) {
+function ticketCount (btn, type, ticketPrice) {
+    // 
     var input = $('#' + type)
     var inputValue = parseInt(input.val())
     if(inputValue >= 0 && inputValue <100){
@@ -7,7 +7,17 @@ function ticketCount (btn, type) {
         inputValue = (inputValue==-1) ? inputValue=0 : inputValue;
     }
     input.val(inputValue)
-    return inputValue
+
+    // Total One Ticket Value
+    var total = $('#total_' + type);
+    var totalValue = inputValue * ticketPrice;
+
+
+    total.text('$' + totalValue)
+
+
+    totalAllTicket()
+    return inputValue, totalValue;
 }
 
 input = $("input[type=number]")
@@ -17,6 +27,22 @@ input.change(()=>{
     }
 })
 
+function totalAllTicket(){
+    var totalAll = 0;
+    var tickets_price_arr = $('.total')
+    for(i=0; i < tickets_price_arr.length;i++){
+        totalAll += parseInt(tickets_price_arr[i].innerHTML.replace('$', ''))
+    }
+
+    var totalAllOutput = $('#total_all')
+    totalAllOutput.text('$' + totalAll)
+
+
+    return totalAll
+
+}
+
+
 // active choosing day
 let dateValue = '';
 function chooseDay(){
@@ -25,10 +51,14 @@ function chooseDay(){
         dateValue = e.target.innerHTML;
         $(e.target).addClass("active");
         console.log(dateValue)
+
+        $('.d-none').removeClass('d-none')
     })
 }
-
 chooseDay()
+
+
+
 
 
 
