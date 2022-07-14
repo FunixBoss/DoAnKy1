@@ -14,8 +14,15 @@ class CreateDayTicketTable extends Migration
     public function up()
     {
         Schema::create('day_ticket', function (Blueprint $table) {
-            $table->integer('day_id')->autoIncrement();
-            $table->integer('ticket_id');
+            $table->increments('day_ticket_id');
+            $table->integer('day_id')->unsigned();
+            $table->integer('ticket_id')->unsigned();
+
+            $table->foreign('ticket_id')->references('ticket_id')->on('tickets');
+            $table->foreign('day_id')->references('day_id')->on('days');
+            
+
+            
         });
     }
 

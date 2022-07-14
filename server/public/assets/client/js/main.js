@@ -17,5 +17,16 @@ input.change(()=>{
     }
 })
 
+// active choosing day
+function chooseDay(){
+    $('.ticket_date').click((e)=>{
+        console.log(e.target)
+    })
+}
+
+chooseDay()
+
+
+
 
 

@@ -15,7 +15,7 @@ use App\Http\Requests\Member\UpdateRequest;
 class MemberController extends Controller
 {
     public function index(){
-        $result = DB::table('customers')->orderBy('created_at', 'DESC')->get();
+        $result = DB::table('users')->orderBy('created_at', 'DESC')->get();
         return view('admin.pages.member.index', ['members' => $result]);
 
     }
@@ -29,13 +29,13 @@ class MemberController extends Controller
         $data = $request->except('_token');
         $data['password'] = bcrypt($request->password);
         $data['created_at'] = new \DateTime();
-        DB::table('customers')->insert($data);
+        DB::table('users')->insert($data);
 
         return redirect()->route('admin.member.index')->with('success', 'Insert successfully');
     }
 
     public function edit($id){
-        $member = DB::table('customers')->where('customer_id', $id)->first();
+        $member = DB::table('users')->where('customer_id', $id)->first();
         $edit_myself=null;
         // dd(Auth::User());
         // if(Auth::user()->customer_id == $id){

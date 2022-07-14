@@ -358,6 +358,8 @@ button:focus {
 .ticket_date:hover{
 	background: #3dcaf6;
 	transition: .2s all ease-in;
+	cursor:pointer;
+	
 }
 
 .ticket_number{
