@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;  
-class customer extends Authenticatable
+
+class Users extends Authenticatable
 {
     use HasFactory;
-    protected $table = 'customer';
+    protected $table = 'users';
     public $timestamps = true;
     protected $primaryKey = 'user_id';
     protected $fillable = [
@@ -24,5 +25,4 @@ class customer extends Authenticatable
             get: fn ($value) => ucfirst($value),
         );
     }
-    
 }

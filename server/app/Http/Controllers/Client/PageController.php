@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class PageController extends Controller
 {
-   
+
     public function index () {
         return view ('client.pages.index');
     }
@@ -25,7 +27,8 @@ class PageController extends Controller
     }
 
     public function fare () {
-        return view ('client.pages.fare');
+        $tickets = DB::table('tickets')->get();
+        return view ('client.pages.fare', ["tickets" => $tickets]);
     }
 
     public function playground () {

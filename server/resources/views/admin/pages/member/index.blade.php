@@ -50,11 +50,11 @@
                                                     
                                                     <td>{{ date('h:i:s - d/m/y', strtotime($member->created_at))}}</td>
                                                     <td>
-                                                        <a href="{{ Route('admin.member.edit', ['id' => $member->customer_id]) }}">Edit</a>
+                                                        <a href="{{ Route('admin.member.edit', ['id' => $member->user_id]) }}">Edit</a>
                                                         
                                                     </td>
                                                     <td>
-                                                        <a onclick="return confirmDelete()" href="{{ Route('admin.member.delete', ['id' => $member->customer_id]) }}">Delete</a>
+                                                        <a onclick="return confirmDelete()" href="{{ Route('admin.member.delete', ['id' => $member->user_id]) }}">Delete</a>
                                                         
                                                     </td>
                                                 </tr>

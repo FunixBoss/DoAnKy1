@@ -19,7 +19,6 @@ class CreateTicketsTable extends Migration
             $table->integer('ticket_price');
             $table->integer('ticket_price_special');
             $table->string('ticket_description');
-
         });
     }
 
