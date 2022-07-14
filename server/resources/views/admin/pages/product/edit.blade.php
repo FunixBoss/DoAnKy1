@@ -20,27 +20,21 @@
                             @csrf
                             <div class="form-group row" >
                                 <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="text" name="name" class="form-control form-control-user" id="exampleFirstName"
-                                        placeholder="Product name" value={{$product->name}}>
+                                    <input type="text" name="ticket_name" class="form-control form-control-user" id="exampleFirstName"
+                                        placeholder="Product name" value={{$ticket->ticket_name}}>
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="number" name="price" class="form-control form-control-user" id="exampleLastName"
-                                        placeholder="Price" value={{$product->price}}>
+                                    <input type="number" name="ticket_price" class="form-control form-control-user" id="exampleLastName"
+                                        placeholder="Price" value={{$ticket->ticket_price}}>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="number" name="category_id" class="form-control form-control-user" id="exampleInputEmail"
-                                    placeholder="Category ID" value={{$product->category_id}}>
+                                <input type="" name="ticket_price_special" class="form-control form-control-user" id="exampleInputEmail"
+                                    placeholder="Category ID" value={{$ticket->ticket_price_special}}>
                             </div>
-                            <div class="form-group row">
-                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <td>FIle Old</td>
-                                    <img src="{{asset('images/product/'.$product->image)}}" alt="">
-                                </div
-                                >
-                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="file" name="image">
-                                </div>
+                            <div class="form-group">
+                                <input type="" name="ticket_description" class="form-control form-control-user" id="exampleInputEmail"
+                                    placeholder="ticket_description" value={{$ticket->ticket_description}}>
                             </div>
                             <input type="submit" value="Edit Product Information" class="btn btn-primary btn-user btn-block">
                         </form>

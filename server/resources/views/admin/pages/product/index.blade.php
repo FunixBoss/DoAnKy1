@@ -29,8 +29,8 @@
                                     <th>Id</th>
                                     <th>Name</th>
                                     <th>Price</th>
-                                    <th>Category_id</th>
-                                    <th>Image</th>
+                                    <th>Price_Special</th>
+                                    <th>description</th>
                                     <th>Edit</th>
                                     <th>Delete</th> 
                                 </tr>
@@ -50,18 +50,14 @@
                                 @forelse ($products as $product)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
-                                        <td>{{$product->name}}</td>
-                                        <td>{{$product->price}}</td>
-                                        <td>{{$product->category_id}}</td>
+                                        <td>{{$product->ticket_name}}</td>
+                                        <td>{{$product->ticket_price}}</td>
+                                        <td>{{$product->ticket_price_special}}</td>
                                         <td>
-                                            @php
-                                                $image = $product->image;
-                                                $image_url = asset('images/product/'.$image);
-                                            @endphp
-                                            <img src="{{$image_url}}" width="100px" alt="">
+                                            {{$product->ticket_description}}
                                         </td>
-                                        <td><a href="{{ Route('admin.product.edit', ['id' => $product->id]) }}">Edit</a></td>
-                                        <td><a onclick="return confirmDelete()" href="{{ Route('admin.product.delete', ['id' => $product->id]) }}">Delete</a></td>
+                                        <td><a href="{{ Route('admin.product.edit', ['id' => $product->ticket_id]) }}">Edit</a></td>
+                                        <td><a onclick="return confirmDelete()" href="{{ Route('admin.product.delete', ['id' => $product->ticket_id]) }}">Delete</a></td>
                                     </tr>
                                 @empty
                                     <tr>
