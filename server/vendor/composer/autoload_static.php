@@ -547,16 +547,10 @@ class ComposerStaticInit1b17d30c2bc221003d93496fc51a689e
         'App\\Http\\Requests\\Member\\UpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Member/UpdateRequest.php',
         'App\\Http\\Requests\\Product\\StoreRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Product/StoreRequest.php',
         'App\\Http\\Requests\\Product\\UpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Product/UpdateRequest.php',
-<<<<<<< HEAD
-        'App\\Models\\admin' => __DIR__ . '/../..' . '/app/Models/admin.php',
-        'App\\Models\\customer' => __DIR__ . '/../..' . '/app/Models/customer.php',
-        'App\\Models\\members' => __DIR__ . '/../..' . '/app/Models/members.php',
-=======
         'App\\Models\\Users' => __DIR__ . '/../..' . '/app/Models/Users.php',
         'App\\Models\\admin' => __DIR__ . '/../..' . '/app/Models/admin.php',
         'App\\Models\\customer' => __DIR__ . '/../..' . '/app/Models/customer.php',
         'App\\Models\\tickets' => __DIR__ . '/../..' . '/app/Models/tickets.php',
->>>>>>> cart
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',

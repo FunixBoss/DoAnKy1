@@ -29,13 +29,8 @@
                                     <th>Id</th>
                                     <th>Name</th>
                                     <th>Price</th>
-<<<<<<< HEAD
-                                    <th>Price_Special</th>
-                                    <th>description</th>
-=======
                                     <th>Price Special</th>
                                     <th>Description</th>
->>>>>>> cart
                                     <th>Edit</th>
                                     <th>Delete</th>
                                 </tr>

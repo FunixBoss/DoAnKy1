@@ -32,16 +32,10 @@ return array(
     'App\\Http\\Requests\\Member\\UpdateRequest' => $baseDir . '/app/Http/Requests/Member/UpdateRequest.php',
     'App\\Http\\Requests\\Product\\StoreRequest' => $baseDir . '/app/Http/Requests/Product/StoreRequest.php',
     'App\\Http\\Requests\\Product\\UpdateRequest' => $baseDir . '/app/Http/Requests/Product/UpdateRequest.php',
-<<<<<<< HEAD
-    'App\\Models\\admin' => $baseDir . '/app/Models/admin.php',
-    'App\\Models\\customer' => $baseDir . '/app/Models/customer.php',
-    'App\\Models\\members' => $baseDir . '/app/Models/members.php',
-=======
     'App\\Models\\Users' => $baseDir . '/app/Models/Users.php',
     'App\\Models\\admin' => $baseDir . '/app/Models/admin.php',
     'App\\Models\\customer' => $baseDir . '/app/Models/customer.php',
     'App\\Models\\tickets' => $baseDir . '/app/Models/tickets.php',
->>>>>>> cart
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',

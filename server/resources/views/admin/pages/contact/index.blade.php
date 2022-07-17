@@ -6,7 +6,7 @@
         <div class="container-fluid">
 
             <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800">Product List</h1>
+            <h1 class="h3 mb-2 text-gray-800">Contact List</h1>
             @if (Session::has('success'))
                 <div class="alert alert-success alert-block">
                     <button type="button" class="close"  data-dismiss="alert">x</button>

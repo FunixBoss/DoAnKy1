@@ -22,7 +22,7 @@ class LoginController extends Controller
         // dd('asd');
         if (Auth::attempt($login)) {
             if(Auth::User()->level ==1){
-                return redirect()->route('admin.member.index');
+                return redirect()->route('admin.');
             }else{
                 return redirect()->route('index');
 

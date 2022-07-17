@@ -50,23 +50,13 @@
                                         <tbody>
                                             @foreach ($tickets as $ticket)
                                             <tr>
-<<<<<<< HEAD
-                                                
-                                                <td>{{ucfirst($ticket->ticket_name)}} 
-=======
                                                 <td>{{ucfirst($ticket->ticket_name)}}
->>>>>>> cart
                                                     @if (!$ticket->ticket_description == '')
                                                         ({{$ticket->ticket_description}})</td>
                                                     @else
                                                         {{$ticket->ticket_description}}</td>
                                                     @endif
                                                 <td>${{$ticket->ticket_price}}</td>
-<<<<<<< HEAD
-                                                
-                                                
-=======
->>>>>>> cart
                                             </tr>
                                             @endforeach
                                             <tr>
@@ -122,23 +112,12 @@
                                         <tbody>
                                             @foreach ($tickets as $ticket)
                                             <tr>
-<<<<<<< HEAD
-                                                <td>{{ucfirst($ticket->ticket_name)}} 
-=======
                                                 <td>{{ucfirst($ticket->ticket_name)}}
->>>>>>> cart
                                                     @if (!$ticket->ticket_description == '')
                                                         ({{$ticket->ticket_description}})</td>
                                                     @else
                                                         {{$ticket->ticket_description}}</td>
                                                     @endif
-<<<<<<< HEAD
-                                                
-                                                @php
-                                                    
-                                                @endphp
-=======
->>>>>>> cart
                                                 <td class="ticket_number">
                                                     <button class="decrement" onClick="ticketCount(this, '{{$ticket->ticket_name}}', {{$ticket->ticket_price}})"> - </button>
                                                     <input type="number" name="{{$ticket->ticket_name}}_ticket" id="{{$ticket->ticket_name}}"class="ticket_amount" value="0" min="0" max="100">
@@ -146,16 +125,8 @@
                                                 </td>
                                                 <td>${{$ticket->ticket_price}}</td>
                                                 <td class="total" id="total_{{$ticket->ticket_name}}">0</td>
-<<<<<<< HEAD
-                                                
                                             </tr>
                                             @endforeach
-                                            
-                                            
-=======
-                                            </tr>
-                                            @endforeach
->>>>>>> cart
                                             <tr>
                                                 <td colspan="3">Total</td>
                                                 <td id="total_all">0</td>
@@ -164,15 +135,8 @@
                                         </tbody>
                                         
                                     </table>
-<<<<<<< HEAD
-                                    <button class="wp_button button_fare d-none">Buy Ticket Online</button>
-                                </div>
-
-
-=======
                                     <button class="wp_button button_fare d-none">Add To Cart</button>
                                 </div>
->>>>>>> cart
                             </div>
                             <div class="overview">
                                 <h3>You come to have fun at the Water Park.
