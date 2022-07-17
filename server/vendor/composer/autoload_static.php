@@ -187,8 +187,8 @@ class ComposerStaticInit4d6a189b693a424d22d3f80f1da03ffc
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Whoops\\' => 
         array (
@@ -332,8 +332,8 @@ class ComposerStaticInit4d6a189b693a424d22d3f80f1da03ffc
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -547,23 +547,10 @@ class ComposerStaticInit4d6a189b693a424d22d3f80f1da03ffc
         'App\\Http\\Requests\\Member\\UpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Member/UpdateRequest.php',
         'App\\Http\\Requests\\Product\\StoreRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Product/StoreRequest.php',
         'App\\Http\\Requests\\Product\\UpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Product/UpdateRequest.php',
-<<<<<<< HEAD
         'App\\Models\\Users' => __DIR__ . '/../..' . '/app/Models/Users.php',
         'App\\Models\\admin' => __DIR__ . '/../..' . '/app/Models/admin.php',
         'App\\Models\\customer' => __DIR__ . '/../..' . '/app/Models/customer.php',
         'App\\Models\\tickets' => __DIR__ . '/../..' . '/app/Models/tickets.php',
-=======
-<<<<<<< HEAD
-        'App\\Models\\admin' => __DIR__ . '/../..' . '/app/Models/admin.php',
-        'App\\Models\\customer' => __DIR__ . '/../..' . '/app/Models/customer.php',
-        'App\\Models\\members' => __DIR__ . '/../..' . '/app/Models/members.php',
-=======
-        'App\\Models\\Users' => __DIR__ . '/../..' . '/app/Models/Users.php',
-        'App\\Models\\admin' => __DIR__ . '/../..' . '/app/Models/admin.php',
-        'App\\Models\\customer' => __DIR__ . '/../..' . '/app/Models/customer.php',
-        'App\\Models\\tickets' => __DIR__ . '/../..' . '/app/Models/tickets.php',
->>>>>>> cart
->>>>>>> e459b38db6565b41807da6599f4cadd10a595c89
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',

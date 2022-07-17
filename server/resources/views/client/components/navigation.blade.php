@@ -17,18 +17,6 @@
             <li><a href="/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></i>Login</a></li>
             <li><a href="/register"><i class="fa-solid fa-user-plus"></i></i>Register</a></li>
         @else
-<<<<<<< HEAD
-        
-        <li>
-            <form action="{{route('getLogout')}}" method="post">
-                @csrf
-                <button type="submit" style="background: none; border:none">
-                    <button class="btn btn-" type="submit">Logout</button>
-                </button>
-            </form>
-        </li>
-
-=======
             <li class="dropdown">
                 <a href="#">
                     <i class="fa-solid fa-user"></i>{{ ucfirst(Auth::User()->fullname) }}
@@ -49,7 +37,6 @@
                     </li>
                 </ul>
             </li>
->>>>>>> cart
         @endif
     </ul>
 </div>

@@ -23,7 +23,7 @@ class MemberController extends Controller
     public function create(){
         return view('admin.pages.member.create');
     }
-
+    
     public function store(StoreRequest $request){
         $data = $request->except('_token');
         $data['password'] = bcrypt($request->password);
@@ -31,8 +31,9 @@ class MemberController extends Controller
         $obj = new Users();
         $obj -> fill($data);
         $obj->save();
-        // DB::table('customers')->insert($data);
         return redirect()->route('admin.member.index')->with('success', 'Insert successfully');
+        // dd('asda');
+        // DB::table('customers')->insert($data);
     }
 
     public function edit($id){
