@@ -224,6 +224,15 @@ button:focus {
 	font-size: 30px;
 	font-weight: 500;
 }
+/* Policy */
+.policy h3 {
+	color: #189ac2;
+}
+.policy div div {
+	margin-top: 10px;
+	font-size: 15px;
+	color: #717171
+}
 /*-------- sidebar start --------*/
 .widget-title{
 	color: #3dcaf6;
@@ -378,9 +387,9 @@ input[type=number]{
 input[type=number]::-webkit-inner-spin-button{
 	display:none
 }
-.widget_fare_buy-ticket.d-none,
-button.d-none{
-	display: none;
+.d-none
+{
+	display: none !important;
 }
 .widget_fare_buy-ticket td button{
 	border: none;
@@ -397,13 +406,45 @@ button.d-none{
 }
 
 
+.days{
+	padding: 0 15px;
+}
+.days:first-of-type{
+	background: #5eb8ff;
+	padding: 8px 15px; 
+	margin: 0;
+}
+.days .ticket_date{
+	border: 2px solid #5eb8ff;
+}
+.today{
+	background: #f5D77C;
+}
+
+
 
 .panel{
     margin-bottom: 100px;
 }
+.see_cart{
+	text-align: center;
+	position: relative;
+}
+.see_cart span{
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	line-height: 30px;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	background:#f5D77C;
+	color: white;
+	border-radius: 50%;
+}
 .button_fare{
-    display: block;
-    margin: 0 auto;
+    display: inline-block;
 }
 .widget.widget_fare .overview h3 {
     font-size: 3rem;
@@ -416,6 +457,157 @@ button.d-none{
     margin-bottom: 2rem;
     color: #6ab7ff;
 }
+/* Check Auth to BUy ticket */
+.check_auth_buy{
+	text-align: center;
+}
+.check_auth_buy a {
+	display: inline-block;
+}
+.check_auth_buy a:first-child{
+	margin-bottom: 10px;
+	text-decoration: underline;
+	transition: all .3s linear;
+}
+.check_auth_buy a:first-child:hover{
+	color: #5eb8ff;
+}
+.check_auth_buy a:last-child{
+	background: #5eb8ff;
+	color: black;
+	padding: 10px 15px;
+	border-radius: 15px;
+	border: 1px solid #5eb8ff;
+	transition: all .3s linear;
+}
+.check_auth_buy a:last-child:hover{
+	background: transparent;
+	color: #5eb8ff;
+}
+
+/* Cart Section Start */
+.wp_cart_caption h2{
+	font-size: 30px;
+	color: #3dcaf6;
+	font-weight: 500;
+    margin-bottom: 30px;
+}
+.wp_cart_caption p{
+	margin-top: 20px;
+	font-size: 16px;
+}
+.wp_cart_caption p:last-of-type{
+    margin-bottom: 25px;
+}
+.wp_cart_caption button{
+	margin-top: 20px;
+}
+.wp_cart_img{
+	position: relative;
+	margin-right: 20px;
+}
+.wp_cart_img:before{
+	position: absolute;
+	content:"";
+	top: -15px;
+	right: -45px;
+	border-radius:10px;
+	border:2px solid #3dcaf6;
+	width: 105%;
+	height: 75%;
+	z-index: -1;
+	-webkit-transition:all 0.3s;
+	-moz-transition:all 0.3s;
+	-ms-transition:all 0.3s;
+	-o-transition:all 0.3s;
+	transition:all 0.3s;
+}
+.wp_cart_img:hover:before{
+	background: #3dcaf6;
+}
+.wp_cart_information{
+	padding: 30px;
+	border-radius: 25px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	margin-bottom: 100px;
+}
+.wp_cart_information + .wp_cart_information{
+	margin-top: 30px;
+}
+
+
+.wp_cart_order{
+	padding: 30px;
+	border-radius: 25px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	margin-bottom: 50px;
+}
+.wp_cart_content .time {
+	position: relative;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+}
+.wp_cart_content .time::after{
+	position: absolute;
+	top: 100%;
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #ccc;
+}
+.wp_cart_content ul{
+	list-style: none;
+	padding: 0;
+}
+.wp_cart_content ul li {
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	position: relative;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+.wp_cart_content ul li:not(:last-of-type):after{
+	position: absolute;
+	top: 100%;
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #ccc
+}
+.wp_cart_content ul li:last-child{
+	margin-top: 20px;
+	font-size: 30px;
+}
+.wp_cart_content ul li h3{
+	font-size: 18px;
+}
+.wp_cart_content ul li .unit-price .count{
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.wp_cart_content ul li .unit-price .price{
+	font-size: 16px;
+}
+.wp_cart_content ul li .total-price .price{
+	font-size: 22px;
+}
+
+.checkout_button{
+	background: #5eb8ff;
+	width: calc(100% - 30px);
+	padding: 15px 0;
+	font-size: 40px;
+	margin: 0 15px !important;
+	color: White;
+	border:none;
+	border-radius: 25px;
+}
+
+
+/* Cart section end */
 /*-------- loader section start --------*/
 #loader{
 	background-color: #b8dbe6;
@@ -788,6 +980,11 @@ button.d-none{
 .wp_banner_caption p span{
 	color:#f1c50e;
 }
+/* authen form  start*/
+.wp_authen_form{
+	margin: 100px 0;
+}
+/* authen form end */
 /*-------- about section start -------*/
 .wp_about_caption h2{
 	font-size: 30px;
@@ -1252,7 +1449,7 @@ iframe{
 	padding:250px 0px 250px 0px;
 }
 .wp_bread_caption{
-	text-align: center;
+	text-align: center !important;
 }
 .wp_bread_caption h1{
 	font-size: 50px;
@@ -1269,6 +1466,7 @@ iframe{
     color:#c50e29;
 }
 .wp_bread_caption ul{
+	justify-content: center;
 	margin:0;
 	padding:0;
 	background: none;

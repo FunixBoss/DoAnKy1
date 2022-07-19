@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     @include('admin.components.head')
     <title>Keansburg Waterpark | Register</title>
 </head>
-
-<body class="bg-gradient-primary">
-
+<body class="bg-image">
     <div class="container">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-12">
                         <div class="p-5">
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
@@ -44,22 +40,10 @@
                                         <input type="number" name="phone" class="form-control form-control-user"
                                             id="exampleRepeatPassword" placeholder="Phone" >
                                     </div>
-
                                 </div>
-
-
                                 <input type="submit" value="Register" class="btn btn-primary btn-user btn-block">
-                                {{-- <hr> --}}
-                                {{-- <a href="" class="btn btn-google btn-user btn-block">
-                                    <i class="fab fa-google fa-fw"></i> Register with Google
-                                </a>
-                                <a href="" class="btn btn-facebook btn-user btn-block">
-                                    <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                                </a> --}}
                             </form>
-                            <hr>
-
-                            <div class="text-center">
+                            <div class="text-center" style="margin-top: 15px; font-size: 25px">
                                 <a class="small" href="/login">Already have an account? Login!</a>
                             </div>
                         </div>

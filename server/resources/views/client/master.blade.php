@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    @yield('links')
     @include('client.components.head')
     @yield('title')
 </head>
