@@ -16,7 +16,7 @@
                     <!-- Begin Page Content -->
                     <div class="container-fluid">
                         <!-- Page Heading -->
-                        <h1 class="h3 mb-2 text-gray-800">Member List</h1>
+                        <h1 class="h3 mb-2 text-gray-800">members List</h1>
                         @include('errors')
                         
 

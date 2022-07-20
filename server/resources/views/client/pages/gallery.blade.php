@@ -183,64 +183,36 @@
 							<div class="comment_area">
 								<h2>All Comments</h2>
 								<ol class="comment-list">
+									@foreach ($comments as $comment)
 									<li>
 										<div class="wp_comment_caption">
 											<div class="wp_comment_img">
-												<img src="{{asset('assets/client/images/comment/comment5.jpg')}}    " alt="">
+												<img src="{{asset('assets/client/images/comment/comment5.jpg')}}" alt="">
 											</div>
 											<div class="wp_comment_text">
-												<h3>Leonardo <small>Yesterday 2:45pm</small></h3>
-												<p>Phasellus placerat ex eu Aenean sit amet nisl imperdiet, lacinia odio in, vulputate urna. mauris molestie vestibulum. Aenean sit amet nisl imperdiet, lacinia odio in, vulputate urna.</p>
+												<h3>Leonardo <small>{{$comment->created_at}}</small></h3>
+												<p>{{$comment->comment_content}}</p>
 											</div>
 										</div>
 									</li>
-									<li>
-										<div class="wp_comment_caption">
-											<div class="wp_comment_img">
-												<img src="{{asset('assets/client/images/comment/comment1.jpg')}}    " alt="">
-											</div>
-											<div class="wp_comment_text">
-												<h3>Elizabeth <small>Yesterday 8:40am</small></h3>
-												<p>Phasellus placerat ex eu Aenean sit amet nisl imperdiet, lacinia odio in, vulputate urna. mauris molestie vestibulum. Aenean sit amet nisl imperdiet, lacinia odio in, vulputate urna.</p>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="wp_comment_caption">
-											<div class="wp_comment_img">
-												<img src="{{asset('assets/client/images/comment/comment4.jpg')}}    " alt="">
-											</div>
-											<div class="wp_comment_text">
-												<h3>Thomas <small>July 15, 2018 8:50pm</small></h3>
-												<p>Phasellus placerat ex eu Aenean sit amet nisl imperdiet, lacinia odio in, vulputate urna. mauris molestie vestibulum. Aenean sit amet nisl imperdiet, lacinia odio in, vulputate urna.</p>
-											</div>
-										</div>
-									</li>
+									@endforeach
 								</ol>
 							</div>
 						</div>
 						<div class="wp_blog_comment_form">
-							<form>
+							<form action="{{route('comment')}}" method = "POST">
+								@csrf
 								<h2>Leave a Comment</h2>
 								<div class="wp_blog_form">
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 									<div class="wp_form_group">
-										<textarea class="form-control" name="comment" placeholder="Comment"></textarea>
+										<textarea class="form-control" name="comment_content" placeholder="Comment"></textarea>
 									</div>
 								</div>
-								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-									<div class="wp_form_group">
-										<input type="text" name="fullname" placeholder="Fullname" class="form-control">
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-									<div class="wp_form_group">
-										<input type="text"name="email" placeholder="Email" class="form-control">
-									</div>
-								</div>
+								
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 									<div class="wp_form_group">
-										<button class="wp_button">Reply</button>
+										<button class="wp_button" type ='submit'>Reply</button>
 									</div>
 								</div>
 								</div>

@@ -5,9 +5,18 @@ namespace App\Http\Controllers\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
 
 use Cart;
+=======
+<<<<<<< HEAD
+use App\Models\comments;
+use App\Models\Contact;
+=======
+use Gloudemans\Shoppingcart\Cart;
+>>>>>>> 34042cc5045c948ba34144688ae95f4e82bdd3c5
+>>>>>>> 7fb57f5d797028326fddd308487383d8b7277faf
 
 
 class PageController extends Controller
@@ -18,9 +27,18 @@ class PageController extends Controller
     }
 
     public function gallery () {
-        return view ('client.pages.gallery');
+        $comments = comments::all();
+        // dd($comments);
+        return view ('client.pages.gallery',['comments' => $comments]);
     }
-
+    public function comment (Request $request) {
+        $comment = new comments();
+        $comment->comment_content = $request->comment_content;
+        $comment->user_id = $request->session()->get('user_id');
+        $comment -> save();
+        // dd( $comment);
+        return redirect()->route('gallery');
+    }
     public function about () {
         return view ('client.pages.about');
     }
@@ -28,7 +46,15 @@ class PageController extends Controller
     public function contact () {
         return view ('client.pages.contact');
     }
-
+    public function postContact (Request $request) {
+        $contact = new Contact();
+        $contact->user_id = $request->session()->get('user_id');
+        $contact->email = $request->get('email');
+        $contact->contact_title = $request->get('contact_title');
+        $contact->contact_content = $request->get('contact_content');
+        $contact->save();
+        return redirect()->route('index');
+    }
     public function fare () {
         $result = DB::table('tickets')->get();
 

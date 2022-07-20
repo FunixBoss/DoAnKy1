@@ -21,8 +21,10 @@ class LoginController extends Controller
         ];
         // dd('asd');
         if (Auth::attempt($login)) {
+            $request->session()->put('user_id',Auth::user()->user_id);
+            // dd($request->session()->all());
             if(Auth::User()->level ==1){
-                return redirect()->route('admin.member.index');
+                return redirect()->route('admin.');
             }else{
                 return redirect()->route('index');
 
@@ -45,8 +47,9 @@ class LoginController extends Controller
         $obj->save();
         return redirect()->route('login');
     }
-    public function getLogout()
+    public function getLogout(Request $request)
     {
+        $request->session()->forget('user_id');
         Auth::logout();
         return redirect()->route('login');
     }

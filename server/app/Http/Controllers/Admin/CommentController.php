@@ -11,10 +11,14 @@ use app\models\Users;
 class CommentController extends Controller
 {
     public function index(){
+<<<<<<< HEAD
+        $result = DB::table('comments')->get();
+=======
         // dd('sad');
         $result = DB::table('comments')->get();
         // echo dd($result);
 
+>>>>>>> 34042cc5045c948ba34144688ae95f4e82bdd3c5
         return view('admin.pages.comment.index', ['comments' => $result]);
     }
     public function delete($id){
