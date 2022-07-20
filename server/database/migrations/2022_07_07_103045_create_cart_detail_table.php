@@ -19,6 +19,7 @@ class CreateCartDetailTable extends Migration
             $table->integer('ticket_id')->unsigned();
             $table->integer('quantity');
             $table->integer('price');
+            $table->date('ticket_date');
 
             $table->foreign('cart_detail_id')->references('cart_id')->on('carts');
             $table->foreign('ticket_id')->references('ticket_id')->on('tickets');

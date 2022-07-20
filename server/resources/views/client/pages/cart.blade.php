@@ -52,36 +52,33 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="wp_cart_content">
-                                {{-- <div class="time">Date of Use: <strong>19/07/2022</strong></div>
+                                {{-- <div class="time">Date of Use: <strong>19/07/2022</strong></div> --}}
                                 <ul>
+                                    @php
+                                        $totalPrice = 0;
+                                        
+                                    @endphp
+                                    @foreach ($cart as $item)
+                                        {{
+                                        $totalPrice += $item->price*$item->qty
+                                        }}
                                     <li>
-                                        <h3>Adult</h3>
+                                        <h3>{{ucfirst($item->name)}}</h3>
                                         <div class="unit-price">
-                                            <div class="count">x1</div>
-                                            <div class="price"><strong>30$</strong></div>
+                                            <div class="count">x{{$item->qty}}</div>
+                                            <div class="price"><strong>${{$item->price}}</strong></div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <h3>Student</h3>
-                                        <div class="unit-price">
-                                            <div class="count">x1</div>
-                                            <div class="price"><strong>30$</strong></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <h3>Kid</h3>
-                                        <div class="unit-price">
-                                            <div class="count">x1</div>
-                                            <div class="price"><strong>30$</strong></div>
-                                        </div>
-                                    </li>
+                                    @endforeach
+                                    
+                                    
                                     <li>
                                         <h3>Total</h3>
                                         <div class="total-price">
-                                            <div class="price"><strong>90$</strong></div>
+                                            <div class="price"><strong>${{$totalPrice}}</strong></div>
                                         </div>
                                     </li>
-                                </ul> --}}
+                                </ul>
                             </div>
                         </div>
 

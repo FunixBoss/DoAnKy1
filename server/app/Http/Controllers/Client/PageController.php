@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Gloudemans\Shoppingcart\Cart;
+use Illuminate\Support\Facades\Auth;
+
+use Cart;
 
 
 class PageController extends Controller
@@ -39,7 +41,38 @@ class PageController extends Controller
     }
 
     public function cart () {
-        return view ('client.pages.cart');
+        $cart = Cart::content();
+
+        return view ('client.pages.cart', ['cart' => $cart]);
+    }
+    public function addToCart($id, $day) {
+        $tickets = DB::table('tickets')->where('ticket_id', $id)->first();
+        // store to cart table
+
+        Cart::add($id, $tickets->ticket_name, 1, $tickets->ticket_price);
+
+
+
+            return redirect()->route('cart');
+    }
+    public function store(){
+        $cart = (Cart::content());
+
+        $cartID = DB::table('carts')->insert([
+            'user_id'=>Auth::user()->id,
+            'payment' => null,
+        ]);
+        $lastInsertedCartId = $cartID->lastInsertId();
+        dd($lastInsertedCartId);
+        $data = array();
+        foreach($cart as $item) {
+            $data[] = [
+                'cart_id'=>$lastInsertedCartId,
+                'ticket_id'=>$item->ticket_id,
+                'quantity'=>$item->qty,
+                'price'=>$item->price,
+            ];
+        }
     }
 
     public function policy () {

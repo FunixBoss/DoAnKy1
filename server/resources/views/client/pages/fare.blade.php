@@ -176,9 +176,8 @@
             $(e.target).addClass("active");
 
             dateValue = e.target.outerText.split("\n");
-
+            var day=  dateValue[1]
             dateValue = JSON.stringify(dateValue);
-            // console.log(dateValue);x  
 
             var url = "{{ route('getDataForAjax', ':days') }}";
             url = url.replace(':days', dateValue);
@@ -196,12 +195,16 @@
                     console.log(response.data)
                     html = "";
                     (response.data).forEach(data => {
+                        var urlAddToCart =  "{{route('addToCart', '')}}" + "/" + data.ticket_id + "/" + day;
+
                         html += 
                         `
                             <tr>
                                 <td>${capitalizeFirstLetter(data.ticket_name)} ${addBraceIfExistContent(data.ticket_description)} </td>
                                 <td>$${data.ticket_price}</td>
-                                <td><a href={{}}></a></td>
+                                <td>
+                                    <a href="${urlAddToCart}"> Buy </a>
+                                </td>
                             </tr>
                         `
                     });
@@ -214,7 +217,7 @@
 
                     $('.button_fare span').html(0)
                     $('#ajax_price').empty().append(html);
-                    checkInputNumber()
+                    // checkInputNumber()
                 }
             });
             

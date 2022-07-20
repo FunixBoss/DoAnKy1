@@ -16,9 +16,7 @@ class CreateCartsTable extends Migration
         Schema::create('carts', function (Blueprint $table) {
             $table->increments('cart_id');
             $table->integer('user_id')->unsigned();
-            $table->integer('ticket_id');
-            $table->date('cart_date');
-            $table->integer('payment');
+            $table->integer('payment')->nullable();
 
             $table->foreign('user_id')->references('user_id')->on('users');
         });
