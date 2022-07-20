@@ -30,7 +30,7 @@
                             <div class="form-group row" >
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="text" name="ticket_name" class="form-control form-control-user" id="exampleFirstName"
-                                        placeholder="ticket_name" >
+                                        placeholder="Ticket Name" >
                                 </div>
                                 <div class="col-sm-6">
                                     <input type="number" name="ticket_price" class="form-control form-control-user" id="exampleLastName"
@@ -39,11 +39,11 @@
                             </div>
                             <div class="form-group">
                                 <input type="number" name="ticket_price_special" class="form-control form-control-user" id="exampleLastName"
-                                        placeholder="special" >
+                                        placeholder="Price In Special Day" >
                             </div>
                             <div class="form-group">
                                 <input type="number" name="ticket_description" class="form-control form-control-user" id="exampleLastName"
-                                        placeholder="description" >
+                                        placeholder="A Short Description" >
                             </div>
                             {{-- <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">

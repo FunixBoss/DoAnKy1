@@ -6,7 +6,7 @@
         <div class="container-fluid">
 
             <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800">Comments List</h1>
+            <h1 class="h3 mb-2 text-gray-800">User Comments List</h1>
             @if (Session::has('success'))
                 <div class="alert alert-success alert-block">
                     <button type="button" class="close"  data-dismiss="alert">x</button>
@@ -16,48 +16,37 @@
 
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <a href="{{route('admin.product.create')}}">
-                        <h6 class="m-0 font-weight-bold text-primary">Add A Product</h6>
-                    </a>
-                </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Id</th>
-                                    <th>Name</th>
-                                    <th>Price</th>
-                                    <th>Price Special</th>
-                                    <th>Description</th>
-                                    <th>Edit</th>
-                                    <th>Delete</th>
+                                    <th>Contact ID</th>
+                                    <th>User ID</th>
+                                    <th>Email</th>
+                                    <th>Contact Content</th>
+                                    <th>Time</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
-                                    <th>Id</th>
-                                    <th>Name</th>
-                                    <th>Price</th>
-                                    <th>Category_id</th>
-                                    <th>Image</th>
-                                    <th>Edit</th>
-                                    <th>Delete</th>
+                                    <th>Contact ID</th>
+                                    <th>User ID</th>
+                                    <th>Email</th>
+                                    <th>Contact Content</th>
+                                    <th>Time</th>
                                 </tr>
                             </tfoot>
                             <tbody>
-                                @forelse ($products as $product)
+                                @forelse ($comments as $comment)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
-                                        <td>{{$product->ticket_name}}</td>
-                                        <td>{{$product->ticket_price}}</td>
-                                        <td>{{$product->ticket_price_special}}</td>
+                                        <td>{{$comment->user_id}}</td>
+                                        <td>{{$comment->comment_content}}</td>
                                         <td>
-                                            {{$product->ticket_description}}
+                                            {{$comment->created_at}}
                                         </td>
-                                        <td><a href="{{ Route('admin.product.edit', ['id' => $product->ticket_id]) }}">Edit</a></td>
-                                        <td><a onclick="return confirmDelete()" href="{{ Route('admin.product.delete', ['id' => $product->ticket_id]) }}">Delete</a></td>
+                                        <td><a onclick="return confirmDelete()" href="{{ Route('admin.comment.delete', ['id' => $comment->comment_id]) }}">Delete</a></td>
                                     </tr>
                                 @empty
                                     <tr>

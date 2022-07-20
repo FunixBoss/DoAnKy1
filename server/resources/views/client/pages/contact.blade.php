@@ -25,11 +25,12 @@
                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                             <div class="wp_contact_content">
                                 <h3>Send Us Message</h3>
-                                <div class="wp_contact_form_group">
+                                <form class="wp_contact_form_group" action="{{route('postContact')}}" method="post" >
+                                    @csrf
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                             <div class="wp_contact_form">
-                                                <input type="text" name="fullname" placeholder="Fullname" class="form-control require">
+                                                <input type="text" name="fullname" placeholder="Fullname" class="form-control require" >
                                             </div>
                                         </div>
 
@@ -40,18 +41,18 @@
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <div class="wp_contact_form">
-                                                <input type="text" name="title" placeholder="Title" class="form-control require">
+                                                <input type="text" name="contact_title" placeholder="Title" class="form-control require">
                                             </div>
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <div class="wp_contact_form">
-                                                <textarea placeholder="Message" name="message" class="form-control require"></textarea>
+                                                <textarea placeholder="Message" name="contact_content" class="form-control require"></textarea>
                                                 <div class="response"></div>
                                                 <button class="wp_button submitForm" data-form-type="contact">To Send</button>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">

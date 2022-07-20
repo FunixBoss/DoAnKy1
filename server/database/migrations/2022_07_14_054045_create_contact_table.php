@@ -18,8 +18,8 @@ class CreateContactTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('email');
             $table->string('contact_content');
+            $table->string('contact_title');
             $table->timestamps();
-
             $table->foreign('user_id')->references('user_id')->on('users');
         });
     }

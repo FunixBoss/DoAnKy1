@@ -40,14 +40,14 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="{{route("admin.product.index")}}">
+        <a class="nav-link" href="/admin/comment/index">
             <i class="fas fa-comment"></i>
             <span>Comments</span>
         </a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="{{route("admin.product.index")}}">
+        <a class="nav-link" href="/admin/contact/index">
             <i class="far fa-address-book"></i>
             <span>Contact</span>
         </a>

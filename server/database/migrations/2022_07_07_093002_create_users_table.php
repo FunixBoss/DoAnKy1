@@ -14,12 +14,6 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> cart
             $table->increments('user_id');
             $table->string('email');
             $table->string('fullname');
@@ -28,10 +22,6 @@ class CreateUsersTable extends Migration
             $table->integer('level')->default(2);
             $table->rememberToken();
             $table->timestamps();
-<<<<<<< HEAD
->>>>>>> 3c579c605a131a940bc7143716726a667bf63c48
-=======
->>>>>>> cart
         });
     }
 

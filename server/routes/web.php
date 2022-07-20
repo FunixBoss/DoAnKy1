@@ -9,6 +9,10 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Client\CartController;
 use App\Http\Controllers\Client\PageController;
 
+use App\Http\Controllers\Admin\CommentController;
+use App\Http\Controllers\Admin\ContactController;
+
+
 
 
 
@@ -16,10 +20,13 @@ use App\Http\Controllers\Client\PageController;
 
 Route::get('/', [PageController::class, 'index'])->name('index');
 Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
+Route::post('/comment', [PageController::class, 'comment'])->name('comment');
+
 Route::get('/fare', [PageController::class, 'fare'])->name('fare');
 Route::get('/playground', [PageController::class, 'playground'])->name('playground');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::post('/contact', [PageController::class, 'postContact'])->name('postContact');
 
 // Authentication
 Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('CheckLogout');
@@ -82,20 +89,21 @@ Route::prefix('admin')->name('admin.')->middleware(['CheckLogin','CheckAdmin'])-
     });
 
 
-    // CATEGORY ROUTES
-    Route::prefix('category')->name('category.')->group(function(){
+    Route::prefix('comment')->name('comment.')->group(function(){
         // show list category
-        Route::get('index', [CategoryController::class, 'index'])->name('index');
-
-        // create category
-        Route::get('create', [CategoryController::class, 'create'])->name('create'); // show form to create category
-        Route::post('store', [CategoryController::class, 'store'])->name('store'); //set action in form to insert
-
-        //edit category
-        Route::get('edit/{id}', [CategoryController::class, 'edit'])->name('edit')->where('id', '[0-9]+'); //show form to edit category
-        Route::post('update/{id}', [CategoryController::class, 'update'])->name('update')->where('id', '[0-9]+');// set action in form to edit category
+        Route::get('index', [CommentController::class, 'index'])->name('index');
 
         // delete category
-        Route::get('delete/{id}', [CategoryController::class, 'delete'])->name('delete')->where('id', '[0-9]+');
+        Route::get('delete/{id}', [CommentController::class, 'delete'])->name('delete')->where('id', '[0-9]+');
     });
+
+    Route::prefix('contact')->name('contact.')->group(function(){
+        // show list category
+        Route::get('index', [ContactController::class, 'index'])->name('index');
+
+        // delete category
+        Route::get('delete/{id}', [ContactController::class, 'delete'])->name('delete')->where('id', '[0-9]+');
+    });
+
+
 });
