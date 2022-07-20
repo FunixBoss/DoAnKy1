@@ -17,13 +17,17 @@ class DaySeeder extends Seeder
     {
         DB::table('days')->insert([
             [
-                'day'=>'Sat',
-                'day_description'=>'Sartuday'
+                'day'=>'Saturday',
+                'day_description'=>'Weekend'
             ],
             [
-                'day'=>'Sun',
-                'day_description'=>'Sunday'
+                'day'=>'Sunday',
+                'day_description'=>'Weekend'
             ],
+            [
+                'day'=>'26-07',
+                'day_description'=>'test'
+            ]
 
         ]);
     }

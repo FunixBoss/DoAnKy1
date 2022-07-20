@@ -38,5 +38,8 @@
                 </ul>
             </li>
         @endif
+
+        <li><a href="/policy "><i class="fa-solid fa-users"></i></i>Terms of Service</a></li>
+
     </ul>
 </div>

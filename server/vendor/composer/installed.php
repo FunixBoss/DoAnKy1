@@ -6,10 +6,14 @@
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
 <<<<<<< HEAD
+<<<<<<< HEAD
         'reference' => 'e459b38db6565b41807da6599f4cadd10a595c89',
 =======
         'reference' => '65c1c4a5db9a7de2e4772a09f2c282f40a941f2c',
 >>>>>>> 25ad5a359a9afb53ca4192ca57e79525866783f4
+=======
+        'reference' => '65c1c4a5db9a7de2e4772a09f2c282f40a941f2c',
+>>>>>>> 34042cc5045c948ba34144688ae95f4e82bdd3c5
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -400,6 +404,7 @@
         ),
         'laravel/framework' => array(
 <<<<<<< HEAD
+<<<<<<< HEAD
             'pretty_version' => 'v8.83.18',
             'version' => '8.83.18.0',
             'type' => 'library',
@@ -414,6 +419,14 @@
             'aliases' => array(),
             'reference' => '4264f2ee12330bdb1be050998f58ba7271236395',
 >>>>>>> 25ad5a359a9afb53ca4192ca57e79525866783f4
+=======
+            'pretty_version' => 'v8.83.19',
+            'version' => '8.83.19.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel/framework',
+            'aliases' => array(),
+            'reference' => '4264f2ee12330bdb1be050998f58ba7271236395',
+>>>>>>> 34042cc5045c948ba34144688ae95f4e82bdd3c5
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
@@ -423,10 +436,14 @@
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             'reference' => 'e459b38db6565b41807da6599f4cadd10a595c89',
 =======
             'reference' => '65c1c4a5db9a7de2e4772a09f2c282f40a941f2c',
 >>>>>>> 25ad5a359a9afb53ca4192ca57e79525866783f4
+=======
+            'reference' => '65c1c4a5db9a7de2e4772a09f2c282f40a941f2c',
+>>>>>>> 34042cc5045c948ba34144688ae95f4e82bdd3c5
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(

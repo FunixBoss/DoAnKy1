@@ -5,7 +5,10 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 class CreateCommentsTable extends Migration
+<<<<<<< HEAD
 
+=======
+>>>>>>> 34042cc5045c948ba34144688ae95f4e82bdd3c5
 {
     /**
      * Run the migrations.

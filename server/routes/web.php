@@ -17,16 +17,19 @@ use App\Http\Controllers\Admin\ContactController;
 
 
 // Client-side Routes
-
 Route::get('/', [PageController::class, 'index'])->name('index');
 Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
 Route::post('/comment', [PageController::class, 'comment'])->name('comment');
 
 Route::get('/fare', [PageController::class, 'fare'])->name('fare');
+Route::get('/get-data-for-ajax/{days}', [PageController::class, 'getDataForAjax'])->name('getDataForAjax');
+
 Route::get('/playground', [PageController::class, 'playground'])->name('playground');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::post('/contact', [PageController::class, 'postContact'])->name('postContact');
+Route::get('/policy', [PageController::class, 'policy'])->name('policy');
+
 
 // Authentication
 Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('CheckLogout');
@@ -38,6 +41,7 @@ Route::post('/logout', [loginController::class, 'getLogout'])->name('getLogout')
 
 // User Cart
 Route::get('/cart', [PageController::class, 'cart'])->name('cart');
+Route::get('/add-to-cart/{id}', [PageController::class, 'addToCart'])->name('addToCart');
 
 
 

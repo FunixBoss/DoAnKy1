@@ -71,7 +71,6 @@ body {
     text-align: left;
     background-color: #fff;
 }
-
 [tabindex="-1"]:focus:not(:focus-visible) {
     outline: 0 !important;
 }
@@ -2082,7 +2081,7 @@ textarea.form-control {
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .form-text {
@@ -5047,7 +5046,6 @@ input[type="button"].btn-block {
 }
 
 .breadcrumb {
-    display: flex;
     flex-wrap: wrap;
     padding: 0.75rem 1rem;
     margin-bottom: 1rem;
@@ -11305,8 +11303,14 @@ a:focus {
     }
 }
 
+.bg-image{
+    background: url("../../client/images/banner.jpg");
+    background-size: cover;
+    background-position: center
+}
+
 .bg-login-image {
-    background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
+    background: url("../../client/images/blog/4.jpg");
     background-position: center;
     background-size: cover;
 }

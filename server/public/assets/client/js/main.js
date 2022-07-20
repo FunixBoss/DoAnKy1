@@ -13,11 +13,11 @@ function ticketCount (btn, type, ticketPrice) {
     var totalValue = inputValue * ticketPrice;
 
 
-    total.text('$' + totalValue)
+    
 
 
     totalAllTicket()
-    return inputValue, totalValue;
+    return total.text('$' + totalValue);
 }
 
 input = $("input[type=number]")
@@ -43,19 +43,31 @@ function totalAllTicket(){
 }
 
 
-// active choosing day
-let dateValue = '';
-function chooseDay(){
-    $('.ticket_date').click((e)=>{
-        $('.ticket_date').removeClass("active");
-        dateValue = e.target.innerHTML;
-        $(e.target).addClass("active");
-        console.log(dateValue)
+// // active choosing day
+// let dateValue = '';
+// function chooseDay(){
+//     $('.ticket_date').click((e)=>{
+//         // $('.ticket_date').removeClass("active");
+//         // $(e.target).addClass("active");
 
-        $('.d-none').removeClass('d-none')
-    })
-}
-chooseDay()
+//         // dateValue = e.target.innerHTML;
+//         // console.log(dateValue)
+
+//         // $('.d-none').removeClass('d-none')
+
+//         $.ajax({
+//             type: "GET",
+//             url: '{{ route('getDataForAjax') }}',
+//             dataType: "html",
+//             success: function (response) {
+//                 $(".noidung").html(response)
+//             }
+//         });
+//     })
+// }
+// chooseDay()
+
+
 
 
 

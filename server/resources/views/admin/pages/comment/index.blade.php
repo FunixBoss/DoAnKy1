@@ -42,7 +42,11 @@
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
                                         <td>{{$comment->user_id}}</td>
+<<<<<<< HEAD
                                         <td>{{$comment->comment_content}}</td>
+=======
+                                        <td>{{$comment->comment_star}}</td>
+>>>>>>> 34042cc5045c948ba34144688ae95f4e82bdd3c5
                                         <td>
                                             {{$comment->created_at}}
                                         </td>

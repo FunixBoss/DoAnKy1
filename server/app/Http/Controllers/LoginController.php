@@ -10,7 +10,7 @@ use App\Models\Users;
 class LoginController extends Controller
 {
     public function login(){
-        return view('admin.pages.login');
+        return view('login');
         // return admin::all();
     }
 
@@ -36,7 +36,7 @@ class LoginController extends Controller
         // return admin::all();
     }
     public function register () {
-        return view ('admin.pages.register');
+        return view ('register');
     }
     public function postRegister (Request $request) {
         $obj = new Users;

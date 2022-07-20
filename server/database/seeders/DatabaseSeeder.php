@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             // factory(User::class, 100)
             TicketSeeder::class,
             DaySeeder::class,
+            
+            DayTicketSeeder::class
         ]);
     }
 }
