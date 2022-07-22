@@ -24,6 +24,7 @@
                     <div class="wp_contact">
                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                             <div class="wp_contact_content">
+                                @include('errors')
                                 <h3>Send Us Message</h3>
                                 <form class="wp_contact_form_group" action="{{route('postContact')}}" method="post" >
                                     @csrf

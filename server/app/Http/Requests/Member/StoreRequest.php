@@ -27,18 +27,18 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'username' => 'required|unique:members',
+            'email' => 'required',
             'password' => 'required',
-            'fullname' => 'required'
+            'fullname' => 'required',
+            'level' => 'required',
         ];
     }
     public function messages()
     {
         return [
-            'username.required' => 'Vui long nhap username',
-            'username.unique' => 'username da ton tai roi',
-            'password.required' => 'Vui long nhap password',
-            'fullname.required' => 'Vui long nhap ho va ten'
+            // 'email.required' => 'vui long nhap email',
+            // 'password.required' => 'Vui long nhap password',
+            // 'fullname.required' => 'Vui long nhap ho va ten'
         ];
     }
 }

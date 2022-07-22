@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Category;
+namespace App\Http\Requests\Contact;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -24,14 +24,16 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'cate_name'=>'required|unique:categories,cate_name,'
+            'email' => 'required',
+            'contact_title' => 'required',
+            'fullname' => 'required',
+            'contact_content' => 'required',
         ];
     }
     public function messages()
     {
         return [
-            'cate_name.unique'=>'Danh muc nay da ton tai! ',
-            'cate_name.required'=>'Vui long nhap danh muc'
+          
 
         ];
     }

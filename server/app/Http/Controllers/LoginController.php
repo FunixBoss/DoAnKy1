@@ -7,6 +7,8 @@ use App\Models\admin;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Users;
+use App\Mail\helloMail;
+use Illuminate\Support\Facades\Mail;
 class LoginController extends Controller
 {
     public function login(){
@@ -40,13 +42,15 @@ class LoginController extends Controller
     }
     public function postRegister (Request $request) {
         $obj = new Users;
-        $obj->username = $request->username;
         $obj->fullname = $request->fullname;
         $obj->email = $request->email;
         $obj->password = bcrypt($request->password);
         $obj->save();
+        Mail::to($obj->email)->send(new helloMail($obj));
+        
         return redirect()->route('login');
     }
+    
     public function getLogout(Request $request)
     {
         $request->session()->forget('user_id');
