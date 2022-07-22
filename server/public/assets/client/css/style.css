@@ -391,12 +391,15 @@ input[type=number]::-webkit-inner-spin-button{
 {
 	display: none !important;
 }
-.widget_fare_buy-ticket td button{
+.widget_fare_buy-ticket td a{
+	display: block;
+
 	border: none;
     background: #3dcaf6;
     padding: 2px 10px;
     font-size: 16px;
     cursor: pointer;
+	user-select: noneE;
 }
 .decrement{
     border-radius: 15px 0 0 15px;
@@ -427,8 +430,13 @@ input[type=number]::-webkit-inner-spin-button{
     margin-bottom: 100px;
 }
 .see_cart{
+	display: inline-block;
 	text-align: center;
 	position: relative;
+}
+.see_cart a {
+	padding: 15px 50px !important;
+	border-radius: 5px ;
 }
 .see_cart span{
 	position: absolute;
@@ -446,6 +454,10 @@ input[type=number]::-webkit-inner-spin-button{
 .button_fare{
     display: inline-block;
 }
+.Submit_button{
+	text-align: center;
+}
+
 .widget.widget_fare .overview h3 {
     font-size: 3rem;
     color: #005cb2;

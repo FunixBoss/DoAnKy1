@@ -40,9 +40,10 @@ Route::post('/logout', [loginController::class, 'getLogout'])->name('getLogout')
 
 
 // User Cart
-Route::get('/cart', [PageController::class, 'cart'])->name('cart');
-Route::get('/add-to-cart/{id}/{day?}', [PageController::class, 'addToCart'])->name('addToCart');
-Route::get('/store-cart', [PageController::class, 'store'])->name('store');
+Route::get('/cart', [CartController::class, 'cart'])->name('cart');
+Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('addToCart');
+
+Route::get('/store-cart', [CartController::class, 'storeCart'])->name('storeCart');
 
 
 

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     @include('admin.components.head')
+    @yield('csrktoken')
     <title>Admin Dashboard</title>
 </head>
 <!-- body -->

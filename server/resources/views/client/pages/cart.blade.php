@@ -54,14 +54,14 @@
                             <div class="wp_cart_content">
                                 {{-- <div class="time">Date of Use: <strong>19/07/2022</strong></div> --}}
                                 <ul>
-                                    @php
+                                    {{-- @php
                                         $totalPrice = 0;
                                         
                                     @endphp
                                     @foreach ($cart as $item)
-                                        {{
+                                        @php
                                         $totalPrice += $item->price*$item->qty
-                                        }}
+                                        @endphp
                                     <li>
                                         <h3>{{ucfirst($item->name)}}</h3>
                                         <div class="unit-price">
@@ -69,14 +69,14 @@
                                             <div class="price"><strong>${{$item->price}}</strong></div>
                                         </div>
                                     </li>
-                                    @endforeach
+                                    @endforeach --}}
                                     
                                     
                                     <li>
                                         <h3>Total</h3>
-                                        <div class="total-price">
+                                        {{-- <div class="total-price">
                                             <div class="price"><strong>${{$totalPrice}}</strong></div>
-                                        </div>
+                                        </div> --}}
                                     </li>
                                 </ul>
                             </div>

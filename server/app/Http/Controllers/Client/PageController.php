@@ -5,19 +5,12 @@ namespace App\Http\Controllers\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
 
 use Cart;
-=======
-<<<<<<< HEAD
 use App\Models\comments;
 use App\Models\Contact;
-=======
-use Gloudemans\Shoppingcart\Cart;
->>>>>>> 34042cc5045c948ba34144688ae95f4e82bdd3c5
->>>>>>> 7fb57f5d797028326fddd308487383d8b7277faf
-
+use Illuminate\Contracts\Session\Session;
 
 class PageController extends Controller
 {
@@ -66,41 +59,6 @@ class PageController extends Controller
         return view ('client.pages.playground');
     }
 
-    public function cart () {
-        $cart = Cart::content();
-
-        return view ('client.pages.cart', ['cart' => $cart]);
-    }
-    public function addToCart($id, $day) {
-        $tickets = DB::table('tickets')->where('ticket_id', $id)->first();
-        // store to cart table
-
-        Cart::add($id, $tickets->ticket_name, 1, $tickets->ticket_price);
-
-
-
-            return redirect()->route('cart');
-    }
-    public function store(){
-        $cart = (Cart::content());
-
-        $cartID = DB::table('carts')->insert([
-            'user_id'=>Auth::user()->id,
-            'payment' => null,
-        ]);
-        $lastInsertedCartId = $cartID->lastInsertId();
-        dd($lastInsertedCartId);
-        $data = array();
-        foreach($cart as $item) {
-            $data[] = [
-                'cart_id'=>$lastInsertedCartId,
-                'ticket_id'=>$item->ticket_id,
-                'quantity'=>$item->qty,
-                'price'=>$item->price,
-            ];
-        }
-    }
-
     public function policy () {
         
         return view ('client.pages.policy');
@@ -129,7 +87,5 @@ class PageController extends Controller
         }
 
         return json_encode(["data"=>$result]);
-
-        
     }
 }

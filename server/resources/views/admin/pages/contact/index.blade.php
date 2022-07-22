@@ -26,10 +26,6 @@
                                     <th>Contact ID</th>
                                     <th>User ID</th>
                                     <th>Email</th>
-<<<<<<< HEAD
-                                    <th>Contact title</th>
-=======
->>>>>>> 34042cc5045c948ba34144688ae95f4e82bdd3c5
                                     <th>Contact Content</th>
                                     <th>Time</th>
                                 </tr>
@@ -40,11 +36,6 @@
                                     <<th>Contact ID</th>
                                     <th>User ID</th>
                                     <th>Email</th>
-<<<<<<< HEAD
-                                    <th>Contact title</th>
-
-=======
->>>>>>> 34042cc5045c948ba34144688ae95f4e82bdd3c5
                                     <th>Contact Content</th>
                                     <th>Time</th>
                                 </tr>
@@ -53,21 +44,11 @@
                                     @forelse ($contacts as $contact)
                                         <tr>
                                             <td>{{$loop->iteration}}</td>
-<<<<<<< HEAD
-                                            <td>{{$contact->user_id}}</td>
-                                            <td>{{$contact->email}}</td>
-                                            <td>{{$contact->contact_title}}</td>
-
-                                            <td>{{$contact->contact_content}}</td>
-                                            <td>
-                                                {{$contact->created_at}}
-=======
                                             <td>{{$contact->contact_id}}</td>
                                             <td>{{$contact->user_id}}</td>
                                             <td>{{$contact->email}}</td>
                                             <td>
                                                 {{$contact->contact_content}}
->>>>>>> 34042cc5045c948ba34144688ae95f4e82bdd3c5
                                             </td>
                                             <td><a onclick="return confirmDelete()" href="{{ Route('admin.contact.delete', ['id' => $contact->contact_id]) }}">Delete</a></td>
                                         </tr>

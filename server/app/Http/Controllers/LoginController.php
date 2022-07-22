@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\admin;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 use App\Models\Users;
 class LoginController extends Controller
 {
@@ -40,7 +42,6 @@ class LoginController extends Controller
     }
     public function postRegister (Request $request) {
         $obj = new Users;
-        $obj->username = $request->username;
         $obj->fullname = $request->fullname;
         $obj->email = $request->email;
         $obj->password = bcrypt($request->password);
