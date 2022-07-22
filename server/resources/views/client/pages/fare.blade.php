@@ -119,11 +119,30 @@
                                     </tbody>
                                 </table>
                                 <!-- Table -->
+<<<<<<< HEAD
                                 {{-- <form action="{{route('addToCart')}}" method="POST"> --}}
                                     {{-- @csrf --}}
                                     <table id="ajax_price" class="table table-striped widget_fare_buy-ticket d-none">
                                     <table>
                                 {{-- </form> --}}
+=======
+                                <table class="table table-striped widget_fare_buy-ticket d-none">
+                                    <thead>
+                                        <tr>
+                                            <td width="40%">Ticket Type</td>
+                                            <td width="30%">Price</td>
+                                            <td width="30%">Buy</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="ajax_price">
+                                        
+                                        
+                                    </tbody>
+
+                                </table>
+                                <div class="see_cart">
+                                </div>
+>>>>>>> 3c9ad71e52f10a33f0b452ebaf2bbba592350790
                             </div>
                             @endif
                         </div>

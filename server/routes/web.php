@@ -5,10 +5,11 @@ use App\Http\Controllers\Admin\MemberController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\LoginController;
+use Illuminate\Http\Request;
 
 use App\Http\Controllers\Client\CartController;
 use App\Http\Controllers\Client\PageController;
-
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\ContactController;
 
@@ -19,7 +20,10 @@ use App\Http\Controllers\Admin\ContactController;
 // Client-side Routes
 Route::get('/', [PageController::class, 'index'])->name('index');
 Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
+Route::get('/showgallery', [PageController::class, 'showGallery'])->name('showGallery');
+
 Route::post('/comment', [PageController::class, 'comment'])->name('comment');
+Route::post('/postCommentAjax', [PageController::class, 'postCommentAjax'])->name('postCommentAjax');
 
 Route::get('/fare', [PageController::class, 'fare'])->name('fare');
 Route::get('/get-data-for-ajax/{days}', [PageController::class, 'getDataForAjax'])->name('getDataForAjax');

@@ -24,16 +24,16 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'username'=>"required"    ,
+            'email' => 'required',
+            'password' => 'required',
             'fullname' => 'required',
+            'level' => 'required',
         ];
     }
     public function messages()
     {
         return [
-            'username.required' => 'Vui long nhap username',
-            'username.unique' => 'username da ton tai roi',
-            'fullname.required' => 'Vui long nhap ho va ten'
+            
         ];
     }
 }

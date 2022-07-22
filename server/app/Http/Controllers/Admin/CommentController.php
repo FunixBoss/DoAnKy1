@@ -11,6 +11,7 @@ use app\models\Users;
 class CommentController extends Controller
 {
     public function index(){
+        // dd('sad');
         $result = DB::table('comments')->get();
         // echo dd($result);
 

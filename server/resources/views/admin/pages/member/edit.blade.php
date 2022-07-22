@@ -27,11 +27,12 @@
                                         <div class="text-center">
                                             <h1 class="h4 text-gray-900 mb-4">Edit Account Information</h1>
                                         </div>
+                                        @include('errors')
                                         <form class="user" action="{{route('admin.member.update', ['id' => $id])}}" method="POST">
                                             @csrf
                                             <div class="form-group row" >
                                                 
-                                                <div class="col-sm-6">
+                                                <div class="col-sm-12   ">
                                                     <input type="text" name="fullname" class="form-control form-control-user" id="exampleLastName"
                                                         placeholder="Your Full Name" value={{$member->fullname}}>
                                                 </div>

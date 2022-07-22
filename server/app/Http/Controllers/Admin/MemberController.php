@@ -56,7 +56,7 @@ class MemberController extends Controller
         if(!empty($request->password)){
             $data['password'] = bcrypt($request->password);
         }
-        Users::where('customer_id', $id)->update($data);
+        Users::where('user_id', $id)->update($data);
         // dd(customer::find($id)->update($data));
         
         
@@ -65,6 +65,6 @@ class MemberController extends Controller
     
     public function delete($id){
         $result = DB::table('users')->where('user_id', '=', $id)->delete();
-        return redirect()->route('admin.member.index');
+        return redirect()->route('admin.member.index')->with('success', 'Delete successfully');
     }
 }

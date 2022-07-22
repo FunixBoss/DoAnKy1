@@ -1,6 +1,7 @@
 @extends('client.master')
 @section('title')
     <title>Keansburg Water Park | Gallery</title>
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 @endsection
 
 @section('main_content')
@@ -183,26 +184,24 @@
 							<div class="comment_area">
 								<h2>All Comments</h2>
 								<ol class="comment-list">
-									@foreach ($comments as $comment)
+									{{-- @foreach ($comments as $comment)
 									<li>
 										<div class="wp_comment_caption">
-											<div class="wp_comment_img">
-												<img src="{{asset('assets/client/images/comment/comment5.jpg')}}" alt="">
-											</div>
-											<div class="wp_comment_text">
-												<h3>Leonardo <small>{{$comment->created_at}}</small></h3>
-												<p>{{$comment->comment_content}}</p>
-											</div>
+											<h3>{{Str::ucfirst($comment->fullname)}} <small>({{date('d-M-y', strtotime($comment->created_at));}})</small>
+											</h3>
+											<span>{{$comment->comment_content}}</span>
+											
 										</div>
 									</li>
-									@endforeach
+									@endforeach --}}
 								</ol>
 							</div>
 						</div>
 						<div class="wp_blog_comment_form">
-							<form action="{{route('comment')}}" method = "POST">
+							@if(Auth::check())
+							<form action="{{route('comment')}}" method = "POST" class="form_comment"> 
 								@csrf
-								<h2>Leave a Comment</h2>
+								<h2 class="ww">Leave a Comment</h2>
 								<div class="wp_blog_form">
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 									<div class="wp_form_group">
@@ -217,10 +216,82 @@
 								</div>
 								</div>
 							</form>
+							@else
+							<div class="panel panel-info">
+								<div class="panel-heading">You Have To Login To Comment</div>
+									<div class="panel-body">
+										<div class="row check_auth_buy">
+											<div class="col-12 authen">
+												<a href="{{route('login')}}">Login</a><br/>
+												<a href="{{route('register')}}">Create an Account!</a>
+											</div>
+										</div>
+									</div>
+							</div>
+							@endif
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$.ajaxSetup({
+			headers: {
+				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			}
+		});
+		$(document).ready(function(){
+			$.ajax({
+				
+				type: "get",
+				url: '{{route('showGallery')}}',
+				data: "data",
+				dataType: "html",
+				success: function (response) {
+					var result =JSON.parse(response);
+					$.each(result, function(index,value){
+						$('.comment-list').append(`
+						<li>
+							<div class="wp_comment_caption">
+								<h3>${value.fullname.charAt(0).toUpperCase() + value.fullname.slice(1).toLowerCase()}<small></small>
+								</h3>
+								<p>${value.comment_content}</p>
+							</div>
+						</li>
+						`);
+					})
+				}
+			});
+		
+		});
+		$( ".form_comment" ).submit(function( event ) {
+			var comment = $('textarea.form-control').val();
+			
+			$.ajax({
+				headers: {
+				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			},
+				type: "POST",
+				_token: "{{ csrf_token() }}",
+				url: '{{route('postCommentAjax')}}',
+				data: {comment: comment},
+				dataType: "html",
+				success: function (response) {
+					var result =JSON.parse(response);
+					$('.comment-list').append(`
+						<li>
+							<div class="wp_comment_caption">
+								<h3>${result[1][0].fullname.charAt(0).toUpperCase() + result[1][0].fullname.slice(1).toLowerCase()}</h3>
+								</h3>
+								<p>${result[0].comment_content}</p>
+							</div>
+						</li>
+						`);
+				}
+			});
+			event.preventDefault();
+		});
+	</script>
 @endsection

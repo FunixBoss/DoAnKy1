@@ -45,7 +45,6 @@
                                         <tr>
                                             <td>{{$loop->iteration}}</td>
                                             <td>{{$contact->contact_id}}</td>
-                                            <td>{{$contact->user_id}}</td>
                                             <td>{{$contact->email}}</td>
                                             <td>
                                                 {{$contact->contact_content}}
